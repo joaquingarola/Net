@@ -12,7 +12,9 @@ namespace LabSintaxis4
             //ej04();
             //ej05();
             //ej06();
-            ej07();
+            //ej07();
+            //ej08();
+            //ej09();
         }
         static void ej01()
         {
@@ -198,6 +200,42 @@ namespace LabSintaxis4
                 }
             }
             return true;
+        }
+        static void ej08()
+        {
+            string ingreso, clave = ".net2022";
+            bool band = false;
+            int intentos = 0;
+            while(intentos < 4 && !band)
+            {
+                intentos++;
+                Console.WriteLine("Introduzca una clave");
+                ingreso = Console.ReadLine();
+                if(ingreso == clave)
+                {
+                    Console.WriteLine("Clave correcta");
+                    band = true;
+                }
+                else
+                    Console.WriteLine("Clave incorrecta. Le quedan {0} intentos", (4-intentos));
+            }
+        }
+        static void ej09()
+        {
+            Console.WriteLine("Ingresa cantidad de filas");
+            int f = Int32.Parse(Console.ReadLine());
+            for(int i = 0; i<f; i++)
+            {
+                for(int j = 0; j < (f - i - 1); j++)
+                {
+                    Console.Write(" ");
+                }
+                for(int k = 0; k < (2 * i + 1); k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
