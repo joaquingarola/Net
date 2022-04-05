@@ -11,6 +11,7 @@ namespace LabSintaxis4
             //ej03();
             //ej04();
             //ej05();
+            ej06();
         }
         static void ej01()
         {
@@ -65,72 +66,71 @@ namespace LabSintaxis4
                 }
             }
         }
-
         static void ej05()
         {
             String nombreMes;
             int numeroMes;
             Console.WriteLine("Ingrese un mes");
-            nombreMes = Console.ReadLine();
+            nombreMes = Console.ReadLine().ToUpper();
 
             switch (nombreMes)
             {
-                case "enero":
+                case "ENERO":
                     numeroMes = 1;
                     Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
                     break;
 
-                case "febrero":
+                case "FEBRERO":
                     numeroMes = 2;
                     Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
                     break;
 
-                case "marzo":
+                case "MARZO":
                     numeroMes = 3;
                     Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
                     break;
 
-                case "abril":
+                case "ABRIL":
                     numeroMes = 4;
                     Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
                     break;
 
-                case "mayo":
+                case "MAYO":
                     numeroMes = 5;
                     Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
                     break;
 
-                case "junio":
+                case "JUNIO":
                     numeroMes = 6;
                     Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
                     break;
 
-                case "julio":
+                case "JULIO":
                     numeroMes = 7;
                     Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
                     break;
 
-                case "agosto":
+                case "AGOSTO":
                     numeroMes = 8;
                     Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
                     break;
 
-                case "septiembre":
+                case "SEPTIEMBRE":
                     numeroMes = 9;
                     Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
                     break;
 
-                case "octubre":
+                case "OCTUBRE":
                     numeroMes = 10;
                     Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
                     break;
 
-                case "noviembre":
+                case "NOVIEMBRE":
                     numeroMes = 11;
                     Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
                     break;
 
-                case "diciembre":
+                case "DICIEMBRE":
                     numeroMes = 12;
                     Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
                     break;
@@ -139,6 +139,34 @@ namespace LabSintaxis4
                     Console.WriteLine("El mes ingresado es incorrecto");
                     break;
             }
+        }
+        static void ej06()
+        {
+            string[] millares = {"", "M", "MM", "MMM"};
+            string[] centenas = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM" };
+            string[] decenas = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" };
+            string[] unidades = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VII", "IX" };
+            string salida;
+
+            Console.WriteLine("Ingrese un número entre 1 y 3999");
+            int nro = Int32.Parse(Console.ReadLine());
+            if(nro > 0 && nro < 4000)
+            {
+                int u = nro % 10; 
+                nro /= 10;
+                int d = nro % 10; 
+                nro /= 10;
+                int c = nro % 10; 
+                nro /= 10;
+                int m = nro % 10; 
+                nro /= 10;
+
+                salida = millares[m] + centenas[c] + decenas[d] + unidades[u];
+                Console.WriteLine("El pasaje a número romano del número {0} es: {1}", nro, salida);
+
+            }
+            else
+                Console.WriteLine("El número ingresado no es válido");
         }
     }
 }
