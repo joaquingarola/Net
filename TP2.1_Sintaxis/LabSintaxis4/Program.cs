@@ -11,7 +11,8 @@ namespace LabSintaxis4
             //ej03();
             //ej04();
             //ej05();
-            ej06();
+            //ej06();
+            ej07();
         }
         static void ej01()
         {
@@ -167,6 +168,36 @@ namespace LabSintaxis4
             }
             else
                 Console.WriteLine("El número ingresado no es válido");
+        }
+        static void ej07()
+        {
+            Console.WriteLine("Ingrese cantidad de parejas de números primeros gemelos que quiere buscar");
+            int cant = Int32.Parse(Console.ReadLine());
+            int c = 0, nro = 1;
+
+            while (c < cant)
+            {
+                nro++;
+                if(esPrimo(nro))
+                {
+                    if (esPrimo(nro + 2))
+                    {
+                        c++;
+                        Console.WriteLine("Pareja {0}: ({1}, {2})", c, nro, (nro+2));
+                    }
+                }    
+            }
+        }
+        static bool esPrimo(int numero)
+        {
+            for (int i = 2; i < numero; i++)
+            {
+                if ((numero % i) == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
