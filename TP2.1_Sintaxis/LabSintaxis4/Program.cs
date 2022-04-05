@@ -10,6 +10,7 @@ namespace LabSintaxis4
             //ej02();
             //ej03();
             //ej04();
+            //ej05();
         }
         static void ej01()
         {
@@ -62,6 +63,81 @@ namespace LabSintaxis4
                 {
                     Console.WriteLine(i);
                 }
+            }
+        }
+
+        static void ej05()
+        {
+            String nombreMes;
+            int numeroMes;
+            Console.WriteLine("Ingrese un mes");
+            nombreMes = Console.ReadLine();
+
+            switch (nombreMes)
+            {
+                case "enero":
+                    numeroMes = 1;
+                    Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
+                    break;
+
+                case "febrero":
+                    numeroMes = 2;
+                    Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
+                    break;
+
+                case "marzo":
+                    numeroMes = 3;
+                    Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
+                    break;
+
+                case "abril":
+                    numeroMes = 4;
+                    Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
+                    break;
+
+                case "mayo":
+                    numeroMes = 5;
+                    Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
+                    break;
+
+                case "junio":
+                    numeroMes = 6;
+                    Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
+                    break;
+
+                case "julio":
+                    numeroMes = 7;
+                    Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
+                    break;
+
+                case "agosto":
+                    numeroMes = 8;
+                    Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
+                    break;
+
+                case "septiembre":
+                    numeroMes = 9;
+                    Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
+                    break;
+
+                case "octubre":
+                    numeroMes = 10;
+                    Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
+                    break;
+
+                case "noviembre":
+                    numeroMes = 11;
+                    Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
+                    break;
+
+                case "diciembre":
+                    numeroMes = 12;
+                    Console.WriteLine("{0}: {1}", nombreMes, numeroMes);
+                    break;
+
+                default:
+                    Console.WriteLine("El mes ingresado es incorrecto");
+                    break;
             }
         }
     }
