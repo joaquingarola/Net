@@ -4,22 +4,24 @@ namespace Geometria
 {
     class Triangulo
     {
-        private int m_base;
-        private int m_altura;
+        private double m_base;
+        private double m_altura;
 
-        public int Altura
+        public double Altura
         {
-            get => default;
+            get => m_altura;
             set
             {
+                m_altura = value;
             }
         }
 
-        public int Base
+        public double Base
         {
-            get => default;
+            get => m_base;
             set
             {
+                m_base = value;
             }
         }
 

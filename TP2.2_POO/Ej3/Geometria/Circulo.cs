@@ -4,9 +4,9 @@ namespace Geometria
 {
     public class Circulo
     {
-        private int m_radio;
+        private double m_radio;
 
-        public int Radio
+        public double Radio
         {
             get => m_radio;
             set
@@ -15,14 +15,14 @@ namespace Geometria
             }
         }
 
-        public void CalcularPerimetro()
+        public double CalcularPerimetro()
         {
-            throw new System.NotImplementedException();
+            return 2 * Math.PI * m_radio;
         }
 
-        public void CalcularSuperficie()
+        public double CalcularSuperficie()
         {
-            throw new System.NotImplementedException();
+            return Math.PI * Math.Pow(m_radio, 2);
         }
     }
 }
