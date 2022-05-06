@@ -42,25 +42,22 @@ namespace Geometria
     {
         public double CalcularPerimetro()
         {
-            Rectangulo a = new Rectangulo();
             double suma_base, suma_altura;
-            suma_base = a.Base;
-            suma_altura = a.Altura;
+            suma_base = Base;
+            suma_altura = Altura;
 
             return suma_base * 2 + suma_altura * 2;
         }
     }
 
-    class Cuadrado : Rectangulo
-    {
 
+    class Cuadrado : Poligono
+    {
         public double CalcularPerimetro()
         {
-            Cuadrado c = new Cuadrado();
-            double perimetro = c.Altura * 4;
-
-            return perimetro;
+            return Altura + 4;
         }
 
     }
+
 }

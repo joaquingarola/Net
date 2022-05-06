@@ -4,25 +4,28 @@ namespace Geometria
 {
     public class Circulo
     {
-        private double m_radio;
+        ///private double m_radio;
 
-        public double Radio
+       /*public double Radio
         {
             get => m_radio;
             set
             {
                 m_radio = value;
             }
-        }
+        } */
+
+        public double Radio { get; set; }
 
         public double CalcularPerimetro()
         {
-            return 2 * Math.PI * m_radio;
+            return 2 * Math.PI * Radio;
         }
 
         public double CalcularSuperficie()
         {
-            return Math.PI * Math.Pow(m_radio, 2);
+            return Math.PI * Math.Pow(Radio, 2);
         }
+
     }
 }
