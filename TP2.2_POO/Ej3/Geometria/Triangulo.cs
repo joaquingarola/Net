@@ -30,9 +30,9 @@ namespace Geometria
             throw new System.NotImplementedException();
         }
 
-        public void CalcularSuperficie()
+        public double CalcularSuperficie()
         {
-            throw new System.NotImplementedException();
+            return m_altura * m_altura;
         }
     }
 }
