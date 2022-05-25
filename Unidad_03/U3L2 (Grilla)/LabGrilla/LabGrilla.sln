@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabGrilla", "LabGrilla\LabGrilla.csproj", "{EFCC88F1-4845-4598-8C76-2612C9BDFAFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{0246D2EC-4513-441D-8044-5D47BB47BBB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFCC88F1-4845-4598-8C76-2612C9BDFAFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFCC88F1-4845-4598-8C76-2612C9BDFAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFCC88F1-4845-4598-8C76-2612C9BDFAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFCC88F1-4845-4598-8C76-2612C9BDFAFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0246D2EC-4513-441D-8044-5D47BB47BBB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0246D2EC-4513-441D-8044-5D47BB47BBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0246D2EC-4513-441D-8044-5D47BB47BBB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0246D2EC-4513-441D-8044-5D47BB47BBB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC8F1486-58BB-4A79-A343-DB234A2BB56F}
+	EndGlobalSection
+EndGlobal
