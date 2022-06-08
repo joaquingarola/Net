@@ -1,5 +1,0 @@
-C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_03\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.csproj.AssemblyReference.cache
-C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_03\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_03\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.AssemblyInfoInputs.cache
-C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_03\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.AssemblyInfo.cs
-C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_03\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.csproj.CoreCompileInputs.cache
