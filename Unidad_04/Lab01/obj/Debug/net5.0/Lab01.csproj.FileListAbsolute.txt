@@ -1,0 +1,17 @@
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\bin\Debug\net5.0\agenda.txt
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\bin\Debug\net5.0\Lab01.exe
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\bin\Debug\net5.0\Lab01.deps.json
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\bin\Debug\net5.0\Lab01.runtimeconfig.json
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\bin\Debug\net5.0\Lab01.runtimeconfig.dev.json
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\bin\Debug\net5.0\Lab01.dll
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\bin\Debug\net5.0\ref\Lab01.dll
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\bin\Debug\net5.0\Lab01.pdb
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\obj\Debug\net5.0\Lab01.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\obj\Debug\net5.0\Lab01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\obj\Debug\net5.0\Lab01.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\obj\Debug\net5.0\Lab01.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\obj\Debug\net5.0\Lab01.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\obj\Debug\net5.0\Lab01.dll
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\obj\Debug\net5.0\ref\Lab01.dll
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\obj\Debug\net5.0\Lab01.pdb
+C:\Users\Usuario\Desktop\Facultad\CUARTO\.Net (elec)\Reposotiorio_GitHub\Net\Unidad_04\Lab01\obj\Debug\net5.0\Lab01.genruntimeconfig.cache
