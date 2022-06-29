@@ -14,8 +14,7 @@ namespace Lab02
         {
             get
             {
-                return @"Provider=Microsoft.Jet.OLEDB.4.0;
-                        Data Source=C:\Proyectos\Unidades\Unidad 04\Lab02\Lab02\bin\Debug;" +
+                return @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\joaqu\Desktop\Facultad\2022\Net\Unidad_04\Lab02\bin\Debug\net5.0;" +
                         "Extended Properties='text;HDR=Yes;FMT=Delimited'";
             }
         }

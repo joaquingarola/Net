@@ -18,6 +18,7 @@ namespace Lab01
             {
                 case "1":
                     read();
+                    Console.ReadKey();
                     break;
 
                 case "2":
@@ -47,7 +48,7 @@ namespace Lab01
         {
             StreamReader reader = File.OpenText("agenda.txt");
             string line;
-            Console.WriteLine("Nombre\tApellido\temail\t\tTelefono");
+            Console.WriteLine("Nombre\tApellido\temail\t\t\tTelefono");
 
             do
             {
@@ -55,7 +56,7 @@ namespace Lab01
                 if (line != null)
                 {
                     string[] values = line.Split(';');
-                    Console.WriteLine("{0}\t{1}\t{2}\t\t{3}", values[0], values[1], values[2], values[3]);
+                    Console.WriteLine("{0}\t{1}\t{2}\t{3}", values[0], values[1], values[2], values[3]);
                 }
             }
             while (line != null);
@@ -125,7 +126,7 @@ namespace Lab01
                     writerXML.WriteValue(values[2]);
                     writerXML.WriteEndElement();
 
-                    writerXML.WriteStartElement("phone number");
+                    writerXML.WriteStartElement("phone-number");
                     writerXML.WriteValue(values[3]);
                     writerXML.WriteEndElement();
                 }

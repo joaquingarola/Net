@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="dsUniversidad.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsUniversidad.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="dsUniversidad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUniversidad.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
