@@ -130,12 +130,12 @@ namespace UI.Desktop
         {
             if (Util.Validar.isEmpty(txtDescripcion.Text))
             {
-                Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else if (cmbEspecialidad.SelectedItem == null)
             {
-                Notificar("Debe seleccionar una especialidad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Notificar("Debe seleccionar una especialidad", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else return true;

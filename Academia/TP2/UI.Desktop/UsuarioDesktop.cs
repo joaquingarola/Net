@@ -110,10 +110,15 @@ namespace UI.Desktop
         public override bool Validar() 
         {
             Boolean EsValido = true;
-      
-            //Falta validad que los campos no estén vacíos
 
-            if (this.txtClave.Text != this.txtConfirmarClave.Text)
+            //Falta validar que los campos no estén vacíos
+
+            if (Util.Validar.isEmpty(txtNombre.Text) || Util.Validar.isEmpty(txtApellido.Text) || Util.Validar.isEmpty(txtUsuario.Text))
+            {
+                Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                EsValido = false;
+            }
+            else if (this.txtClave.Text != this.txtConfirmarClave.Text)
             {
                 EsValido = false;
                 this.Notificar("La clave no coincide con la confirmacion de la misma", MessageBoxButtons.OK, MessageBoxIcon.Error);

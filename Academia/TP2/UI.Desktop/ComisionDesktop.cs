@@ -130,17 +130,17 @@ namespace UI.Desktop
         {
             if (Util.Validar.isEmpty(txtDescripcion.Text) || Util.Validar.isEmpty(txtAnioEspecialidad.Text))
             {
-                Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else if (!int.TryParse(txtAnioEspecialidad.Text, out int result))
             {
-                Notificar("El año debe estar expresado como número", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Notificar("El año debe estar expresado como número", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else if (cmbPlan.SelectedItem == null)
             {
-                Notificar("Debe seleccionar una especialidad", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Notificar("Debe seleccionar una especialidad", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else return true;
