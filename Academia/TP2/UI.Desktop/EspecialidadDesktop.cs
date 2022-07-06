@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Business.Logic;
 using Business.Entities;
-using Util;
 
 namespace UI.Desktop
 {
@@ -104,7 +103,7 @@ namespace UI.Desktop
 
         public override bool Validar()
         {
-            if (Util.Validar.isEmpty(txtDescripcion.Text))
+            if (Validaciones.IsEmpty(txtDescripcion.Text))
             {
                 Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

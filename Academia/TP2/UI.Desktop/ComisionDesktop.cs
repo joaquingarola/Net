@@ -128,7 +128,7 @@ namespace UI.Desktop
         }
         public override bool Validar()
         {
-            if (Util.Validar.isEmpty(txtDescripcion.Text) || Util.Validar.isEmpty(txtAnioEspecialidad.Text))
+            if (Validaciones.IsEmpty(txtDescripcion.Text) || Validaciones.IsEmpty(txtAnioEspecialidad.Text))
             {
                 Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

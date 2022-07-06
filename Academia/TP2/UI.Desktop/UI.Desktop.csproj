@@ -76,6 +76,18 @@
     <Compile Include="Especialidades.Designer.cs">
       <DependentUpon>Especialidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlanDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +125,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Especialidades.resx">
       <DependentUpon>Especialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlanDesktop.resx">
       <DependentUpon>PlanDesktop.cs</DependentUpon>
@@ -157,10 +175,6 @@
     <ProjectReference Include="..\Business.Logic\Business.Logic.csproj">
       <Project>{f7afd7b0-d979-4e65-9b7f-70a5b2598995}</Project>
       <Name>Business.Logic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Util\Util.csproj">
-      <Project>{d499ef1f-d6b5-445c-9c1f-e05df579e137}</Project>
-      <Name>Util</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

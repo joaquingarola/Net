@@ -44,9 +44,11 @@
     <Compile Include="BusinessLogic.cs" />
     <Compile Include="ComisionLogic.cs" />
     <Compile Include="EspecialidadLogic.cs" />
+    <Compile Include="MateriaLogic.cs" />
     <Compile Include="PlanLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioLogic.cs" />
+    <Compile Include="Validaciones.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business.Entities\Business.Entities.csproj">

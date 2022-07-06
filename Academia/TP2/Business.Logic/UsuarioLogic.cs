@@ -28,6 +28,18 @@ namespace Business.Logic
             return UsuarioData.GetOne(ID);
         }
 
+        public Usuario GetOne(string usuario, string clave)
+        {
+            try
+            {
+                return UsuarioData.GetOne(usuario, clave);
+            }
+            catch (Exception ExcepcionManejada)
+            {
+                throw ExcepcionManejada;
+            }
+        }
+
         public List<Usuario> GetAll()
         {
             return UsuarioData.GetAll();

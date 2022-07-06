@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Business.Logic;
 using Business.Entities;
-using System.Text.RegularExpressions; /* para validar email */
 
 namespace UI.Desktop
 {
@@ -111,9 +110,7 @@ namespace UI.Desktop
         {
             Boolean EsValido = true;
 
-            //Falta validar que los campos no estén vacíos
-
-            if (Util.Validar.isEmpty(txtNombre.Text) || Util.Validar.isEmpty(txtApellido.Text) || Util.Validar.isEmpty(txtUsuario.Text))
+            if (Validaciones.IsEmpty(txtNombre.Text) || Validaciones.IsEmpty(txtApellido.Text) || Validaciones.IsEmpty(txtUsuario.Text))
             {
                 Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 EsValido = false;
@@ -128,35 +125,13 @@ namespace UI.Desktop
                 EsValido = false;
                 this.Notificar("La clave debe tener al menos 8 caracteres", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (EsMailValido(this.txtEmail.Text) == false)
+            else if (Validaciones.EsMailValido(this.txtEmail.Text) == false)
             {
                 EsValido = false;
                 this.Notificar("Email no valido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return EsValido;
         }
-
-        private Boolean EsMailValido(String email)
-        {
-            String expresion;
-            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-            if (Regex.IsMatch(email, expresion))
-            {
-                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
-
 
         #endregion
 

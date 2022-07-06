@@ -1,5 +1,0 @@
-C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Util\bin\Debug\Util.dll
-C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Util\bin\Debug\Util.pdb
-C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Util\obj\Debug\Util.csproj.CoreCompileInputs.cache
-C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Util\obj\Debug\Util.dll
-C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Util\obj\Debug\Util.pdb
