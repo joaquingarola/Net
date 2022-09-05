@@ -1,0 +1,6 @@
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Unidad_05\Lab03\Negocio\bin\Debug\Negocio.dll
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Unidad_05\Lab03\Negocio\bin\Debug\Negocio.pdb
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Unidad_05\Lab03\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Unidad_05\Lab03\Negocio\obj\Debug\Negocio.dll
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Unidad_05\Lab03\Negocio\obj\Debug\Negocio.pdb
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Unidad_05\Lab03\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
