@@ -1,0 +1,5 @@
+C:\Users\joaqu\Desktop\Facultad\2022\Net\TP2L06\TP2\Business.Entities\bin\Debug\Business.Entities.dll
+C:\Users\joaqu\Desktop\Facultad\2022\Net\TP2L06\TP2\Business.Entities\bin\Debug\Business.Entities.pdb
+C:\Users\joaqu\Desktop\Facultad\2022\Net\TP2L06\TP2\Business.Entities\obj\Debug\Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\joaqu\Desktop\Facultad\2022\Net\TP2L06\TP2\Business.Entities\obj\Debug\Business.Entities.dll
+C:\Users\joaqu\Desktop\Facultad\2022\Net\TP2L06\TP2\Business.Entities\obj\Debug\Business.Entities.pdb
