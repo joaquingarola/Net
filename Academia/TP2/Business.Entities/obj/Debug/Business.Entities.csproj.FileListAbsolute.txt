@@ -3,3 +3,4 @@ C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Business.Entities\bin\Debu
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Business.Entities\obj\Debug\Business.Entities.csproj.CoreCompileInputs.cache
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Business.Entities\obj\Debug\Business.Entities.dll
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Business.Entities\obj\Debug\Business.Entities.pdb
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Business.Entities\obj\Debug\Business.Entities.csproj.AssemblyReference.cache
