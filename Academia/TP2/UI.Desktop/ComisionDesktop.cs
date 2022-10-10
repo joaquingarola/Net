@@ -47,7 +47,7 @@ namespace UI.Desktop
             try
             {
                 this.cmbPlan.DataSource = pl.GetAll();
-                this.cmbPlan.DisplayMember = "Descripcion";
+                this.cmbPlan.DisplayMember = "DescripcionFull";
                 this.cmbPlan.AutoCompleteMode = AutoCompleteMode.Suggest;
                 this.cmbPlan.AutoCompleteSource = AutoCompleteSource.ListItems;
             }
@@ -141,6 +141,11 @@ namespace UI.Desktop
             else if (cmbPlan.SelectedItem == null)
             {
                 Notificar("Debe seleccionar una especialidad", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (int.Parse(txtAnioEspecialidad.Text) > 5 || int.Parse(txtAnioEspecialidad.Text) < 1)
+            {
+                Notificar("El año debe estar entre 1 y 5", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else return true;

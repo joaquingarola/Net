@@ -8,7 +8,7 @@ using Business.Entities;
 
 namespace Business.Logic
 {
-    class MateriaLogic : BusinessLogic
+    public class MateriaLogic : BusinessLogic
     {
         private MateriaAdapter _MateriaData;
 
@@ -34,6 +34,31 @@ namespace Business.Logic
             }
 
         }
+
+        public List<Business.Entities.Materia> GetMateriasPlan(Plan plan)
+        {
+            try
+            {
+                return MateriaData.GetMateriasPlan(plan);
+            }
+            catch (Exception ExcepcionManejada)
+            {
+                throw ExcepcionManejada;
+            }
+        }
+
+        public List<Business.Entities.Materia> GetPosibles(Persona alumno)
+        {
+            try
+            {
+                return MateriaData.GetPosibles(alumno.ID);
+            }
+            catch (Exception ExcepcionManejada)
+            {
+                throw ExcepcionManejada;
+            }
+        }
+
         public Materia GetOne(int ID)
         {
             try

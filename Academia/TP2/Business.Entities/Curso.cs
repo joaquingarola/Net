@@ -16,8 +16,10 @@ namespace Business.Entities
 
         public string Descripcion
         {
-            get { return _Descripcion; }
-            set { _Descripcion = value; }
+            get
+            {
+                return Materia.Descripcion + " - Comisión " + Comision.Descripcion;
+            }
         }
         public int AnioCalendario
         {

@@ -16,7 +16,12 @@ namespace Business.Entities
         private DateTime _FechaNacimiento;
         private Plan _Plan;
         private int _Legajo;
-        private TiposPersonas _TipoPersona;
+        private TipoPersonas _TipoPersona;
+
+        public string DescripcionFull
+        {
+            get { return _Nombre + ", " + _Apellido + " - " + _Legajo; }
+        }
 
         public string Nombre
         {
@@ -58,16 +63,17 @@ namespace Business.Entities
             get { return _FechaNacimiento; }
             set { _FechaNacimiento = value; }
         }
-        public TiposPersonas TipoPersona
+        public TipoPersonas TipoPersona
         {
             get { return _TipoPersona; }
             set { _TipoPersona = value; }
         }
 
-        public enum TiposPersonas
+        public enum TipoPersonas
         {
-            Docente,
-            Alumno
+            Alumno,
+            Profesor,
+            Administrador
         }
     }
 }

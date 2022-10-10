@@ -36,6 +36,7 @@ namespace UI.Desktop
             this.label3 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.lnkOlvidaPass = new System.Windows.Forms.LinkLabel();
             this.tlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@ namespace UI.Desktop
             this.tlLogin.Controls.Add(this.label3, 0, 2);
             this.tlLogin.Controls.Add(this.txtUsuario, 1, 1);
             this.tlLogin.Controls.Add(this.txtContraseña, 1, 2);
+            this.tlLogin.Controls.Add(this.lnkOlvidaPass, 0, 3);
             this.tlLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlLogin.Location = new System.Drawing.Point(0, 0);
             this.tlLogin.Name = "tlLogin";
@@ -77,11 +79,11 @@ namespace UI.Desktop
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(167, 22);
+            this.label1.Location = new System.Drawing.Point(142, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(112, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenido!";
+            this.label1.Text = "Bienvenido al sistema!";
             // 
             // label2
             // 
@@ -120,6 +122,18 @@ namespace UI.Desktop
             this.txtContraseña.Size = new System.Drawing.Size(125, 20);
             this.txtContraseña.TabIndex = 5;
             // 
+            // lnkOlvidaPass
+            // 
+            this.lnkOlvidaPass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lnkOlvidaPass.AutoSize = true;
+            this.lnkOlvidaPass.Location = new System.Drawing.Point(14, 182);
+            this.lnkOlvidaPass.Name = "lnkOlvidaPass";
+            this.lnkOlvidaPass.Size = new System.Drawing.Size(103, 13);
+            this.lnkOlvidaPass.TabIndex = 6;
+            this.lnkOlvidaPass.TabStop = true;
+            this.lnkOlvidaPass.Text = "Olvidé mi contaseña";
+            this.lnkOlvidaPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkOlvidaPass_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,5 +157,6 @@ namespace UI.Desktop
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.LinkLabel lnkOlvidaPass;
     }
 }

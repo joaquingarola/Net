@@ -24,3 +24,16 @@ C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.De
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.csproj.CopyComplete
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.exe
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.pdb
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.MateriaDesktop.resources
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.Materias.resources
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.PersonaDesktop.resources
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.Personas.resources
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.CursoDesktop.resources
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.Cursos.resources
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.DocentesCurso.resources
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.ElegirDocente.resources
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.ElegirComision.resources
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.InscripcionAlumno.resources
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.VerInscripcionesAlumno.resources
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.RegistroNotas.resources
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Desktop\obj\Debug\UI.Desktop.IngresoNota.resources

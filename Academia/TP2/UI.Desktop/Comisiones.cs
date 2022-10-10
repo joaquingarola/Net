@@ -52,7 +52,7 @@ namespace UI.Desktop
         {
             foreach (DataGridViewRow row in this.dgvComisiones.Rows)
             {
-                row.Cells["plan"].Value = ((Comision)row.DataBoundItem).Plan.Descripcion;
+                row.Cells["plan"].Value = ((Comision)row.DataBoundItem).Plan.DescripcionFull;
             }
         }
 

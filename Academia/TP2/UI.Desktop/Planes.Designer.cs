@@ -33,13 +33,13 @@ namespace UI.Desktop
             this.tcPlanes = new System.Windows.Forms.ToolStripContainer();
             this.tlPlanes = new System.Windows.Forms.TableLayoutPanel();
             this.dgvPlanes = new System.Windows.Forms.DataGridView();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.tsPlanes = new System.Windows.Forms.ToolStrip();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnMateria = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.tsPlanes = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
@@ -105,7 +105,39 @@ namespace UI.Desktop
             this.dgvPlanes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPlanes.Size = new System.Drawing.Size(666, 260);
             this.dgvPlanes.TabIndex = 0;
+            this.dgvPlanes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlanes_CellContentClick);
             this.dgvPlanes.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvPlanes_DataBindingComplete);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // Especialidad
+            // 
+            this.Especialidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Especialidad.HeaderText = "Especialidad";
+            this.Especialidad.Name = "Especialidad";
+            this.Especialidad.ReadOnly = true;
+            // 
+            // btnMateria
+            // 
+            this.btnMateria.HeaderText = "Materias";
+            this.btnMateria.Name = "btnMateria";
+            this.btnMateria.ReadOnly = true;
+            this.btnMateria.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnMateria.Text = "Ver materias";
+            this.btnMateria.UseColumnTextForButtonValue = true;
             // 
             // btnActualizar
             // 
@@ -139,37 +171,6 @@ namespace UI.Desktop
             this.tsPlanes.Name = "tsPlanes";
             this.tsPlanes.Size = new System.Drawing.Size(81, 25);
             this.tsPlanes.TabIndex = 0;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // Especialidad
-            // 
-            this.Especialidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Especialidad.HeaderText = "Especialidad";
-            this.Especialidad.Name = "Especialidad";
-            this.Especialidad.ReadOnly = true;
-            // 
-            // btnMateria
-            // 
-            this.btnMateria.HeaderText = "Materias";
-            this.btnMateria.Name = "btnMateria";
-            this.btnMateria.ReadOnly = true;
-            this.btnMateria.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnMateria.Text = "Ver materias";
-            this.btnMateria.UseColumnTextForButtonValue = true;
             // 
             // tsbNuevo
             // 

@@ -22,5 +22,13 @@ namespace Business.Entities
             set { _Descripcion = value; }
         }
 
+        public string DescripcionFull
+        {
+            get
+            {
+                return Descripcion + " - " + Especialidad.Descripcion;
+            }
+        }
+
     }
 }

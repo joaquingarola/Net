@@ -10,29 +10,30 @@ namespace Business.Entities
     {
         private Curso _Curso;
         private Persona _Docente;
-        private TiposCargos _Cargo;
+        private TipoCargos _Cargo;
 
         public Curso Curso
         {
             get { return _Curso; }
             set { _Curso = value; }
         }
+
         public Persona Docente
         {
             get { return _Docente; }
             set { _Docente = value; }
         }
-        public TiposCargos Cargo
+
+        public TipoCargos Cargo
         {
             get { return _Cargo; }
             set { _Cargo = value; }
         }
 
-        public enum TiposCargos
+        public enum TipoCargos
         {
-            Practica,
-            Teoria,
-            Ayudante
+            Profesor,
+            Auxiliar
         }
     }
 }

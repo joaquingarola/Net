@@ -76,6 +76,15 @@ namespace UI.Desktop
             }
         }
 
+        private void dgvPlanes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvPlanes.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                Materias appMaterias = new Materias((Plan)dgvPlanes.Rows[e.RowIndex].DataBoundItem);
+                appMaterias.Show();
+            }
+        }
+
         private void dgvPlanes_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             foreach (DataGridViewRow row in this.dgvPlanes.Rows)
