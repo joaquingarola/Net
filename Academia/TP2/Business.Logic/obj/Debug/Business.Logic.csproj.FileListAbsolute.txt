@@ -9,3 +9,14 @@ C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Business.Logic\obj\Debug\B
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Business.Logic\obj\Debug\Business.Logic.csproj.CopyComplete
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Business.Logic\obj\Debug\Business.Logic.dll
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\Business.Logic\obj\Debug\Business.Logic.pdb
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\Business.Logic\bin\Debug\Business.Logic.dll
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\Business.Logic\bin\Debug\Business.Logic.pdb
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\Business.Logic\bin\Debug\Business.Entities.dll
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\Business.Logic\bin\Debug\Data.Database.dll
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\Business.Logic\bin\Debug\Business.Entities.pdb
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\Business.Logic\bin\Debug\Data.Database.pdb
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\Business.Logic\obj\Debug\Business.Logic.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\Business.Logic\obj\Debug\Business.Logic.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\Business.Logic\obj\Debug\Business.Logic.csproj.CopyComplete
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\Business.Logic\obj\Debug\Business.Logic.dll
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\Business.Logic\obj\Debug\Business.Logic.pdb

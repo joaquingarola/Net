@@ -63,3 +63,7 @@ C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Web\obj\Debug\UI.Web.cs
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Web\obj\Debug\UI.Web.csproj.CopyComplete
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Web\obj\Debug\UI.Web.dll
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Web\obj\Debug\UI.Web.pdb
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\UI.Web\obj\Debug\UI.Web.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\UI.Web\obj\Debug\UI.Web.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\UI.Web\obj\Debug\UI.Web.dll
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\UI.Web\obj\Debug\UI.Web.pdb

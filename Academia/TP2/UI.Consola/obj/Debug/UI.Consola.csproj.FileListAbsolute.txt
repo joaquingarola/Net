@@ -12,3 +12,7 @@ C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Consola\obj\Debug\UI.Co
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Consola\obj\Debug\UI.Consola.csproj.CopyComplete
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Consola\obj\Debug\UI.Consola.exe
 C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Consola\obj\Debug\UI.Consola.pdb
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\UI.Consola\obj\Debug\UI.Consola.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\UI.Consola\obj\Debug\UI.Consola.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\UI.Consola\obj\Debug\UI.Consola.exe
+C:\Users\Usuario\Desktop\TP2_Net\Net\Academia\TP2\UI.Consola\obj\Debug\UI.Consola.pdb
