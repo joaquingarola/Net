@@ -57,7 +57,7 @@ namespace UI.Desktop
             try
             {
                 this.cmbPersona.DataSource = pl.GetAll();
-                this.cmbPersona.DisplayMember = "Legajo";
+                this.cmbPersona.DisplayMember = "DescripcionFull";
                 this.cmbPersona.AutoCompleteMode = AutoCompleteMode.Suggest;
                 this.cmbPersona.AutoCompleteSource = AutoCompleteSource.ListItems;
             }

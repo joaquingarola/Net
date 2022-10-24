@@ -30,21 +30,21 @@ namespace UI.Desktop
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblID = new System.Windows.Forms.Label();
-            this.lblClave = new System.Windows.Forms.Label();
-            this.chkHabilitado = new System.Windows.Forms.CheckBox();
             this.lblLegajo = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.lbltxtConfirmarClave = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.lblClave = new System.Windows.Forms.Label();
             this.txtClave = new System.Windows.Forms.TextBox();
+            this.lbltxtConfirmarClave = new System.Windows.Forms.Label();
             this.txtConfirmarClave = new System.Windows.Forms.TextBox();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.lnkVerAlumnos = new System.Windows.Forms.LinkLabel();
-            this.lnkVerProfesores = new System.Windows.Forms.LinkLabel();
+            this.lblID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.chkHabilitado = new System.Windows.Forms.CheckBox();
             this.cmbPersona = new System.Windows.Forms.ComboBox();
+            this.lnkVerProfesores = new System.Windows.Forms.LinkLabel();
+            this.lnkVerAlumnos = new System.Windows.Forms.LinkLabel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.chkAdmin = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,8 +52,8 @@ namespace UI.Desktop
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.90494F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.82084F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Controls.Add(this.lblLegajo, 0, 1);
@@ -85,42 +85,11 @@ namespace UI.Desktop
             this.tableLayoutPanel1.Size = new System.Drawing.Size(547, 181);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // lblID
-            // 
-            this.lblID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(59, 8);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(18, 13);
-            this.lblID.TabIndex = 0;
-            this.lblID.Text = "ID";
-            // 
-            // lblClave
-            // 
-            this.lblClave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblClave.AutoSize = true;
-            this.lblClave.Location = new System.Drawing.Point(51, 68);
-            this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(34, 13);
-            this.lblClave.TabIndex = 3;
-            this.lblClave.Text = "Clave";
-            // 
-            // chkHabilitado
-            // 
-            this.chkHabilitado.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chkHabilitado.AutoSize = true;
-            this.chkHabilitado.Location = new System.Drawing.Point(303, 6);
-            this.chkHabilitado.Name = "chkHabilitado";
-            this.chkHabilitado.Size = new System.Drawing.Size(73, 17);
-            this.chkHabilitado.TabIndex = 4;
-            this.chkHabilitado.Text = "Habilitado";
-            this.chkHabilitado.UseVisualStyleBackColor = true;
-            // 
             // lblLegajo
             // 
             this.lblLegajo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLegajo.AutoSize = true;
-            this.lblLegajo.Location = new System.Drawing.Point(48, 38);
+            this.lblLegajo.Location = new System.Drawing.Point(24, 38);
             this.lblLegajo.Name = "lblLegajo";
             this.lblLegajo.Size = new System.Drawing.Size(39, 13);
             this.lblLegajo.TabIndex = 5;
@@ -130,11 +99,38 @@ namespace UI.Desktop
             // 
             this.lblUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(318, 38);
+            this.lblUsuario.Location = new System.Drawing.Point(319, 38);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(43, 13);
             this.lblUsuario.TabIndex = 6;
             this.lblUsuario.Text = "Usuario";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUsuario.Location = new System.Drawing.Point(412, 35);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(132, 20);
+            this.txtUsuario.TabIndex = 12;
+            // 
+            // lblClave
+            // 
+            this.lblClave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblClave.AutoSize = true;
+            this.lblClave.Location = new System.Drawing.Point(26, 68);
+            this.lblClave.Name = "lblClave";
+            this.lblClave.Size = new System.Drawing.Size(34, 13);
+            this.lblClave.TabIndex = 3;
+            this.lblClave.Text = "Clave";
+            // 
+            // txtClave
+            // 
+            this.txtClave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtClave.Location = new System.Drawing.Point(114, 65);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(130, 20);
+            this.txtClave.TabIndex = 13;
             // 
             // lbltxtConfirmarClave
             // 
@@ -146,52 +142,78 @@ namespace UI.Desktop
             this.lbltxtConfirmarClave.TabIndex = 7;
             this.lbltxtConfirmarClave.Text = "Confirmar clave";
             // 
+            // txtConfirmarClave
+            // 
+            this.txtConfirmarClave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtConfirmarClave.Location = new System.Drawing.Point(412, 65);
+            this.txtConfirmarClave.Name = "txtConfirmarClave";
+            this.txtConfirmarClave.PasswordChar = '*';
+            this.txtConfirmarClave.Size = new System.Drawing.Size(132, 20);
+            this.txtConfirmarClave.TabIndex = 14;
+            // 
+            // lblID
+            // 
+            this.lblID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(34, 8);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.TabIndex = 0;
+            this.lblID.Text = "ID";
+            // 
             // txtID
             // 
             this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(139, 5);
+            this.txtID.Location = new System.Drawing.Point(114, 5);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(130, 20);
             this.txtID.TabIndex = 8;
             // 
-            // txtUsuario
+            // chkHabilitado
             // 
-            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUsuario.Location = new System.Drawing.Point(411, 35);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(133, 20);
-            this.txtUsuario.TabIndex = 12;
+            this.chkHabilitado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkHabilitado.AutoSize = true;
+            this.chkHabilitado.Location = new System.Drawing.Point(304, 6);
+            this.chkHabilitado.Name = "chkHabilitado";
+            this.chkHabilitado.Size = new System.Drawing.Size(73, 17);
+            this.chkHabilitado.TabIndex = 4;
+            this.chkHabilitado.Text = "Habilitado";
+            this.chkHabilitado.UseVisualStyleBackColor = true;
             // 
-            // txtClave
+            // cmbPersona
             // 
-            this.txtClave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtClave.Location = new System.Drawing.Point(139, 65);
-            this.txtClave.Name = "txtClave";
-            this.txtClave.PasswordChar = '*';
-            this.txtClave.Size = new System.Drawing.Size(130, 20);
-            this.txtClave.TabIndex = 13;
+            this.cmbPersona.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbPersona.FormattingEnabled = true;
+            this.cmbPersona.Location = new System.Drawing.Point(90, 34);
+            this.cmbPersona.Name = "cmbPersona";
+            this.cmbPersona.Size = new System.Drawing.Size(178, 21);
+            this.cmbPersona.TabIndex = 19;
             // 
-            // txtConfirmarClave
+            // lnkVerProfesores
             // 
-            this.txtConfirmarClave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtConfirmarClave.Location = new System.Drawing.Point(411, 65);
-            this.txtConfirmarClave.Name = "txtConfirmarClave";
-            this.txtConfirmarClave.PasswordChar = '*';
-            this.txtConfirmarClave.Size = new System.Drawing.Size(133, 20);
-            this.txtConfirmarClave.TabIndex = 14;
+            this.lnkVerProfesores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lnkVerProfesores.AutoSize = true;
+            this.lnkVerProfesores.Location = new System.Drawing.Point(142, 128);
+            this.lnkVerProfesores.Name = "lnkVerProfesores";
+            this.lnkVerProfesores.Size = new System.Drawing.Size(75, 13);
+            this.lnkVerProfesores.TabIndex = 18;
+            this.lnkVerProfesores.TabStop = true;
+            this.lnkVerProfesores.Text = "Ver profesores";
+            this.lnkVerProfesores.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnVerProfesores_LinkClicked);
             // 
-            // btnAceptar
+            // lnkVerAlumnos
             // 
-            this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAceptar.Location = new System.Drawing.Point(294, 154);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(92, 23);
-            this.btnAceptar.TabIndex = 15;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.lnkVerAlumnos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lnkVerAlumnos.AutoSize = true;
+            this.lnkVerAlumnos.Location = new System.Drawing.Point(11, 128);
+            this.lnkVerAlumnos.Name = "lnkVerAlumnos";
+            this.lnkVerAlumnos.Size = new System.Drawing.Size(65, 13);
+            this.lnkVerAlumnos.TabIndex = 17;
+            this.lnkVerAlumnos.TabStop = true;
+            this.lnkVerAlumnos.Text = "Ver alumnos";
+            this.lnkVerAlumnos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnVerAlumnos_LinkClicked);
             // 
             // btnCancelar
             // 
@@ -204,38 +226,16 @@ namespace UI.Desktop
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // lnkVerAlumnos
+            // btnAceptar
             // 
-            this.lnkVerAlumnos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lnkVerAlumnos.AutoSize = true;
-            this.lnkVerAlumnos.Location = new System.Drawing.Point(35, 128);
-            this.lnkVerAlumnos.Name = "lnkVerAlumnos";
-            this.lnkVerAlumnos.Size = new System.Drawing.Size(65, 13);
-            this.lnkVerAlumnos.TabIndex = 17;
-            this.lnkVerAlumnos.TabStop = true;
-            this.lnkVerAlumnos.Text = "Ver alumnos";
-            this.lnkVerAlumnos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnVerAlumnos_LinkClicked);
-            // 
-            // lnkVerProfesores
-            // 
-            this.lnkVerProfesores.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lnkVerProfesores.AutoSize = true;
-            this.lnkVerProfesores.Location = new System.Drawing.Point(166, 128);
-            this.lnkVerProfesores.Name = "lnkVerProfesores";
-            this.lnkVerProfesores.Size = new System.Drawing.Size(75, 13);
-            this.lnkVerProfesores.TabIndex = 18;
-            this.lnkVerProfesores.TabStop = true;
-            this.lnkVerProfesores.Text = "Ver profesores";
-            this.lnkVerProfesores.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnVerProfesores_LinkClicked);
-            // 
-            // cmbPersona
-            // 
-            this.cmbPersona.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbPersona.FormattingEnabled = true;
-            this.cmbPersona.Location = new System.Drawing.Point(143, 34);
-            this.cmbPersona.Name = "cmbPersona";
-            this.cmbPersona.Size = new System.Drawing.Size(121, 21);
-            this.cmbPersona.TabIndex = 19;
+            this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAceptar.Location = new System.Drawing.Point(294, 154);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(92, 23);
+            this.btnAceptar.TabIndex = 15;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // chkAdmin
             // 

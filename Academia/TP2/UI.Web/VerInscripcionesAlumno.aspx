@@ -4,7 +4,7 @@
         SelectedRowStyle-BackColor="Black"
         SelectedRowStyle-ForeColor="White"
         DataKeyNames="ID"
-        OnSelectedIndexChanged="gridView_SelectedIndexChanged">
+        OnSelectedIndexChanged="gridView_SelectedIndexChanged" HorizontalAlign="Center">
         <Columns>
             <asp:BoundField DataField="Curso.Descripcion" HeaderText="Inscripciones" />
             <asp:CommandField ShowSelectButton="True" />
@@ -12,9 +12,11 @@
         <SelectedRowStyle BackColor="Black" ForeColor="White" />
     </asp:GridView>
 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     <asp:Label ID="lblError" runat="server" Font-Bold="True" ForeColor="#CC3300"></asp:Label>
 
-    <asp:Panel ID="gridActionsPanel" runat="server">
+    <asp:Panel ID="gridActionsPanel" runat="server" HorizontalAlign="Center">
         <asp:LinkButton ID="eliminarLinkButton" runat="server" OnClick="eliminarLinkButton_Click">Eliminar</asp:LinkButton>
     </asp:Panel>
 
