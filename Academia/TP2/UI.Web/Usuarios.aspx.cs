@@ -11,7 +11,19 @@ namespace UI.Web
 {
     public partial class Usuarios : System.Web.UI.Page
     {
-        UsuarioLogic _logic;
+        private UsuarioLogic _logic;
+
+        public UsuarioLogic Logic
+        {
+            get
+            {
+                if (_logic == null)
+                {
+                    _logic = new UsuarioLogic();
+                }
+                return _logic;
+            }
+        }
 
         public enum FormModes
         {
@@ -24,18 +36,6 @@ namespace UI.Web
         {
             get { return (FormModes)this.ViewState["FormMode"]; }
             set { this.ViewState["FormMode"] = value; }
-        }
-
-        private UsuarioLogic Logic
-        {
-            get
-            {
-                if (_logic == null)
-                {
-                    _logic = new UsuarioLogic();
-                }
-                return _logic;
-            }
         }
 
         private Usuario Entity
