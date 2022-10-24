@@ -11,17 +11,17 @@ namespace UI.Web
 {
     public partial class Usuarios : System.Web.UI.Page
     {
-        private UsuarioLogic _logic;
+        private UsuarioLogic _Logic;
 
         public UsuarioLogic Logic
         {
             get
             {
-                if (_logic == null)
+                if (_Logic == null)
                 {
-                    _logic = new UsuarioLogic();
+                    _Logic = new UsuarioLogic();
                 }
-                return _logic;
+                return _Logic;
             }
         }
 
@@ -73,31 +73,71 @@ namespace UI.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
+            if (getPersonaActual().TipoPersona.ToString() == "Administrador")
             {
-                LoadGrid();
+                if (!Page.IsPostBack)
+                {
+                    try
+                    {
+                        PersonaLogic pl = new PersonaLogic();
+                        this.LoadGrid();
+                        this.ddlPersona.DataSource = pl.GetAll();
+                        this.ddlPersona.DataBind();
+                        this.lblError.Text = "";
+                    }
+                    catch (Exception ex)
+                    {
+                        this.lblError.Text = ex.Message;
+                    }
+                }
             }
+            else
+            {
+                this.gridPanel.Visible = false;
+                this.gridActionsPanel.Visible = false;
+                this.formPanel.Visible = false;
+                this.lblError.Text = "Autorización denegada";
+            }
+        }
+
+        public Usuario UsuarioActual
+        {
+            get { return (Usuario)Session["UsuarioActual"]; }
+        }
+
+        public Persona getPersonaActual()
+        {
+            PersonaLogic pl = new PersonaLogic();
+            Persona p = pl.GetOne(UsuarioActual.Persona.ID);
+            return p;
         }
 
         private void LoadGrid()
         {
-            this.gridView.DataSource = this.Logic.GetAll();
-            this.gridView.DataBind();
+            try 
+            { 
+                this.gridUsuarios.DataSource = this.Logic.GetAll();
+                this.gridUsuarios.DataBind();
+                this.ddlPersona.DataBind();
+            }
+            catch (Exception ex)
+            {
+                this.lblError.Text = ex.Message;
+            }
         }
 
         private void loadForm(int id)
         {
             this.Entity = this.Logic.GetOne(id);
-            this.nombreTextBox.Text = this.Entity.Nombre;
-            this.apellidoTextBox.Text = this.Entity.Apellido;
-            this.emailTextBox.Text = this.Entity.Email;
+            this.ddlPersona.SelectedValue = this.Entity.Persona.ID.ToString();
+            this.txtNombreUsuario.Text = this.Entity.NombreUsuario;
+            this.txtClave.Text = this.Entity.Clave;
             this.habilitadoCheckBox.Checked = this.Entity.Habilitado;
-            this.nombreUsuarioTextBox.Text = this.Entity.NombreUsuario;
         }
 
         protected void gridView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.SelectedID = (int)this.gridView.SelectedValue;
+            this.SelectedID = (int)this.gridUsuarios.SelectedValue;
             this.formPanel.Visible = false;
         }
 
@@ -114,17 +154,24 @@ namespace UI.Web
 
         private void LoadEntity(Usuario usuario)
         {
-            usuario.Nombre = this.nombreTextBox.Text;
-            usuario.Apellido = this.apellidoTextBox.Text;
-            usuario.Email = this.emailTextBox.Text;
-            usuario.NombreUsuario = this.nombreUsuarioTextBox.Text;
-            usuario.Clave = this.claveTextBox.Text;
+            usuario.Persona = new Persona();
+            usuario.NombreUsuario = this.txtNombreUsuario.Text;
+            usuario.Clave = this.txtClave.Text;
             usuario.Habilitado = this.habilitadoCheckBox.Checked;
+            usuario.Persona.ID = int.Parse(ddlPersona.SelectedValue);
         }
 
         private void SaveEntity(Usuario usuario)
         {
-            this.Logic.Save(usuario);
+            try 
+            { 
+                this.Logic.Save(usuario);
+                this.lblError.Text = "";
+            }
+            catch (Exception ex)
+            {
+                this.lblError.Text = ex.Message;
+            }
         }
 
         protected void aceptarLinkButton_Click(object sender, EventArgs e)
@@ -134,7 +181,7 @@ namespace UI.Web
                 case FormModes.Baja:
                     this.DeleteEntity(this.SelectedID);
                     this.LoadGrid();
-                    this.gridView.SelectedIndex = -1;
+                    this.gridUsuarios.SelectedIndex = -1;
                     this.SelectedID = 0;
                     break;
                 case FormModes.Modificacion:
@@ -159,14 +206,13 @@ namespace UI.Web
 
         private void EnableForm(bool enable)
         {
-            this.nombreTextBox.Enabled = enable;
-            this.apellidoTextBox.Enabled = enable;
-            this.emailTextBox.Enabled = enable;
-            this.nombreUsuarioTextBox.Enabled = enable;
-            this.claveTextBox.Visible = enable;
+            this.txtNombreUsuario.Enabled = enable;
+            this.habilitadoCheckBox.Enabled = enable;
+            this.txtClave.Visible = enable;
             this.claveLabel.Visible = enable;
-            this.repetirClaveTextBox.Visible = enable;
+            this.txtRepetirClave.Visible = enable;
             this.repetirClaveLabel.Visible = enable;
+            this.ddlPersona.Enabled = enable;
         }
 
         protected void eliminarLinkButton_Click(object sender, EventArgs e)
@@ -182,7 +228,15 @@ namespace UI.Web
 
         private void DeleteEntity(int id)
         {
-            this.Logic.Delete(id);
+            try 
+            { 
+                this.Logic.Delete(id);
+                this.lblError.Text = "";
+            }
+            catch (Exception ex)
+            {
+                this.lblError.Text = ex.Message;
+            }
         }
 
         protected void nuevoLinkButton_Click(object sender, EventArgs e)
@@ -195,11 +249,8 @@ namespace UI.Web
 
         private void ClearForm()
         {
-            this.nombreTextBox.Text = string.Empty;
-            this.apellidoTextBox.Text = string.Empty;
-            this.emailTextBox.Text = string.Empty;
             this.habilitadoCheckBox.Checked = false;
-            this.nombreUsuarioTextBox.Text = string.Empty;
+            this.txtNombreUsuario.Text = string.Empty;
         }
 
         protected void cancelarLinkButton_Click(object sender, EventArgs e)

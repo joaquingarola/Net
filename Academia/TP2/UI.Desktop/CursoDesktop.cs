@@ -75,7 +75,10 @@ namespace UI.Desktop
                 this.cmbMateria.AutoCompleteMode = AutoCompleteMode.Suggest;
                 this.cmbMateria.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-                this.cmbComision.DataSource = cl.GetAll();
+                PlanLogic pl = new PlanLogic();
+                Plan p = pl.GetOne(SelectedMateria.Plan.ID);
+
+                this.cmbComision.DataSource = cl.GetComisionesPlan(p);
                 this.cmbComision.DisplayMember = "Descripcion";
                 this.cmbComision.AutoCompleteMode = AutoCompleteMode.Suggest;
                 this.cmbComision.AutoCompleteSource = AutoCompleteSource.ListItems;
@@ -234,6 +237,15 @@ namespace UI.Desktop
         private void cmbMateria_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectedMateria = (Business.Entities.Materia)cmbMateria.SelectedItem;
+
+            PlanLogic pl = new PlanLogic();
+            Plan p = pl.GetOne(SelectedMateria.Plan.ID);
+
+            ComisionLogic cl = new ComisionLogic();
+            this.cmbComision.DataSource = cl.GetComisionesPlan(p);
+            this.cmbComision.DisplayMember = "Descripcion";
+            this.cmbComision.AutoCompleteMode = AutoCompleteMode.Suggest;
+            this.cmbComision.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
     }
 }

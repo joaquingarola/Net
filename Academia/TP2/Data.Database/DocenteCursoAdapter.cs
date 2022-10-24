@@ -36,6 +36,8 @@ namespace Data.Database
                     }
                     dc.Docente = new Persona();
                     dc.Docente.ID = (int)reader["id_docente"];
+                    dc.Curso = new Curso();
+                    dc.Curso.ID = (int)reader["id_curso"];
                     docentesCurso.Add(dc);
                 }
                 reader.Close();
@@ -43,6 +45,8 @@ namespace Data.Database
                 {
                     PersonaAdapter pl = new PersonaAdapter();
                     dc.Docente = pl.GetOne(dc.Docente.ID);
+                    CursoAdapter cl = new CursoAdapter();
+                    dc.Curso = cl.GetOne(dc.Curso.ID);
                 }
             }
             catch
@@ -54,6 +58,51 @@ namespace Data.Database
                 this.CloseConnection();
             }
             return docentesCurso;
+        }
+
+        public DocenteCurso GetOne(int ID)
+        {
+            DocenteCurso docenteCurso = new DocenteCurso();
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdSELECT = new SqlCommand("select * from docentes_cursos where id_dictado=@id", sqlConn);
+                cmdSELECT.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                SqlDataReader reader = cmdSELECT.ExecuteReader();
+                while (reader.Read())
+                {
+                    docenteCurso.ID = (int)reader["id_dictado"];
+                    switch (reader["cargo"])
+                    {
+                        case (0):
+                            docenteCurso.Cargo = DocenteCurso.TipoCargos.Profesor;
+                            break;
+
+                        case (1):
+                            docenteCurso.Cargo = DocenteCurso.TipoCargos.Auxiliar;
+                            break;
+                    }
+                    docenteCurso.Docente = new Persona();
+                    docenteCurso.Docente.ID = (int)reader["id_docente"];
+                    docenteCurso.Curso = new Curso();
+                    docenteCurso.Curso.ID = (int)reader["id_curso"];
+                }
+                reader.Close();
+                PersonaAdapter pl = new PersonaAdapter();
+                docenteCurso.Docente = pl.GetOne(docenteCurso.Docente.ID);
+                CursoAdapter cl = new CursoAdapter();
+                docenteCurso.Curso = cl.GetOne(docenteCurso.Curso.ID);
+
+            }
+            catch
+            {
+                throw new Exception("Error al recuperar docentes");
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return docenteCurso;
         }
 
         public bool ExisteDocente(int id_doc, int id_cur)

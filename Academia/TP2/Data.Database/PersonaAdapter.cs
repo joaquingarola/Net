@@ -127,6 +127,64 @@ namespace Data.Database
             return personas;
         }
 
+        public List<Persona> GetAll(Persona.TipoPersonas tipo, int id_plan)
+        {
+            List<Persona> personas = new List<Persona>();
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdPersonas = new SqlCommand("select * from personas where tipo_persona=@tipo and id_plan = @id", sqlConn);
+                cmdPersonas.Parameters.Add("@tipo", SqlDbType.Int).Value = tipo;
+                cmdPersonas.Parameters.Add("@id", SqlDbType.Int).Value = id_plan;
+                SqlDataReader drPersonas = cmdPersonas.ExecuteReader();
+                while (drPersonas.Read())
+                {
+                    if ((int)drPersonas["tipo_persona"] != 2)
+                    {
+                        Persona psa = new Persona();
+                        psa.ID = (int)drPersonas["id_persona"];
+                        psa.Nombre = (string)drPersonas["nombre"];
+                        psa.Apellido = (string)drPersonas["apellido"];
+                        psa.FechaNacimiento = (DateTime)drPersonas["fecha_nac"];
+                        psa.Direccion = (string)drPersonas["direccion"];
+                        psa.Telefono = (string)drPersonas["telefono"];
+                        psa.Email = (string)drPersonas["email"];
+                        psa.Legajo = (int)drPersonas["legajo"];
+                        psa.Plan = new Plan();
+                        psa.Plan.ID = (int)drPersonas["id_plan"];
+                        switch ((int)drPersonas["tipo_persona"])
+                        {
+                            case 0:
+                                psa.TipoPersona = Persona.TipoPersonas.Alumno;
+                                break;
+
+                            case 1:
+                                psa.TipoPersona = Persona.TipoPersonas.Profesor;
+                                break;
+                        }
+                        personas.Add(psa);
+                    }
+                }
+                drPersonas.Close();
+                foreach (Persona p in personas)
+                {
+                    PlanAdapter pa = new PlanAdapter();
+                    p.Plan = pa.GetOne(p.Plan.ID);
+                }
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada =
+                    new Exception("Error al recuperar lista de personas", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return personas;
+        }
+
         public Business.Entities.Persona GetOne(int ID)
         {
             Persona psa = new Persona();

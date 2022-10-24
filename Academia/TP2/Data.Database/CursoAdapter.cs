@@ -68,6 +68,7 @@ namespace Data.Database
                 {
                     Curso cur = new Curso();
                     cur.ID = (int)reader["id_curso"];
+                    cur.Materia = materia;
                     cur.Comision = new Comision();
                     cur.Comision.ID = (int)reader["id_comision"];
                     cursos.Add(cur);

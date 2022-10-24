@@ -46,6 +46,18 @@ namespace Business.Logic
             }
         }
 
+        public List<Business.Entities.Persona> GetAll(Persona.TipoPersonas tipo, int id_plan)
+        {
+            try
+            {
+                return PersonaData.GetAll(tipo, id_plan);
+            }
+            catch (Exception ExcepcionManejada)
+            {
+                throw ExcepcionManejada;
+            }
+        }
+
         public Persona GetOne(int ID)
         {
             try

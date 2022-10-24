@@ -90,8 +90,31 @@ namespace Data.Database
                     aluInsc.Alumno.ID = (int)drInscripciones["id_alumno"];
                     aluInsc.Curso = new Curso();
                     aluInsc.Curso.ID = (int)drInscripciones["id_curso"];
+                    aluInsc.Nota = (int)drInscripciones["nota"];
+                    switch (drInscripciones["condicion"])
+                    {
+                        case "Aprobado":
+                            aluInsc.Condicion = AlumnoInscripcion.Condiciones.Aprobado;
+                            break;
+                        case "Cursando":
+                            aluInsc.Condicion = AlumnoInscripcion.Condiciones.Cursando;
+                            break;
+                        case "Inscripto":
+                            aluInsc.Condicion = AlumnoInscripcion.Condiciones.Inscripto;
+                            break;
+                        case "Libre":
+                            aluInsc.Condicion = AlumnoInscripcion.Condiciones.Libre;
+                            break;
+                        case "Regular":
+                            aluInsc.Condicion = AlumnoInscripcion.Condiciones.Regular;
+                            break;
+                    }
                 }
                 drInscripciones.Close();
+                PersonaAdapter pa = new PersonaAdapter();
+                aluInsc.Alumno = pa.GetOne(aluInsc.Alumno.ID);
+                CursoAdapter ca = new CursoAdapter();
+                aluInsc.Curso = ca.GetOne(aluInsc.Curso.ID);
             }
             catch (Exception Ex)
             {
@@ -194,13 +217,14 @@ namespace Data.Database
                 SqlCommand cmdINSERT = new SqlCommand("SET XACT_ABORT ON; " +
                     "BEGIN TRANSACTION; " +
                     "IF (SELECT cupo FROM cursos WHERE id_curso=@idCur)>0 BEGIN " +
-                    "INSERT INTO alumnos_inscripciones(id_alumno,id_curso,condicion) " +
-                    "values (@idAlu,@idCur,@condicion) select @@identity; " +
+                    "INSERT INTO alumnos_inscripciones(id_alumno,id_curso,condicion,nota) " +
+                    "values (@idAlu,@idCur,@condicion,@nota) select @@identity; " +
                     "UPDATE cursos SET cupo=cupo-1 WHERE id_curso=@idCur END " +
                     "COMMIT TRANSACTION; ", sqlConn);
 
                 cmdINSERT.Parameters.Add("@idAlu", SqlDbType.Int).Value = ai.Alumno.ID;
                 cmdINSERT.Parameters.Add("@idCur", SqlDbType.Int).Value = ai.Curso.ID;
+                cmdINSERT.Parameters.Add("@nota", SqlDbType.Int).Value = 0;
                 cmdINSERT.Parameters.Add("@condicion", SqlDbType.VarChar).Value = Business.Entities.AlumnoInscripcion.Condiciones.Inscripto;
 
                 ai.ID = Decimal.ToInt32((decimal)cmdINSERT.ExecuteScalar());

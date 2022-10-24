@@ -35,6 +35,18 @@ namespace Business.Logic
             }
         }
 
+        public List<Business.Entities.Comision> GetComisionesPlan(Plan plan)
+        {
+            try
+            {
+                return ComisionData.GetComisionesPlan(plan);
+            }
+            catch (Exception ExcepcionManejada)
+            {
+                throw ExcepcionManejada;
+            }
+        }
+
         public Comision GetOne(int ID)
         {
             try

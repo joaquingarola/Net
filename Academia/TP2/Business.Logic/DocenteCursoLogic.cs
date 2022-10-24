@@ -34,6 +34,18 @@ namespace Business.Logic
             }
         }
 
+        public DocenteCurso GetOne(int ID)
+        {
+            try
+            {
+                return DocenteCursoData.GetOne(ID);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public void Delete(int ID)
         {
             try

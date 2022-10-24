@@ -12,7 +12,10 @@
                 <asp:CommandField SelectText="Seleccionar" ShowSelectButton="True" />
             </Columns>
         </asp:GridView>
+        <br />
     </asp:Panel>
+
+    <asp:Label ID="lblError" runat="server" Font-Bold="True" ForeColor="#CC3300"></asp:Label>
 
     <asp:Panel ID="gridActionsPanel" runat="server">
         <asp:LinkButton ID="editarLinkButton" runat="server" OnClick="editarLinkButton_Click">Editar</asp:LinkButton>
@@ -23,12 +26,12 @@
     <asp:Panel ID="formPanel" Visible="false" runat="server">
 
         <asp:Label ID="descripcionLabel" runat="server" Text="Descripcion: "></asp:Label>
-        <asp:TextBox ID="descripcionTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtDescripcion" runat="server"></asp:TextBox>
         <asp:RequiredFieldValidator 
             ID="RequiredFieldValidatorDescripcion" 
             runat="server"
             ErrorMessage="Por favor ingrese una descripción" 
-            ControlToValidate="descripcionTextBox"
+            ControlToValidate="txtDescripcion"
             Display="Dynamic" 
             ForeColor="red"
             ValidationGroup="a"

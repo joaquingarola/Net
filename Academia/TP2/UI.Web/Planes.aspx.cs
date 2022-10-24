@@ -11,7 +11,7 @@ namespace UI.Web
 {
     public partial class Planes : System.Web.UI.Page
     {
-        PlanLogic _logic;
+        PlanLogic _Logic;
 
         public enum FormModes
         {
@@ -30,11 +30,11 @@ namespace UI.Web
         {
             get
             {
-                if (_logic == null)
+                if (_Logic == null)
                 {
-                    _logic = new PlanLogic();
+                    _Logic = new PlanLogic();
                 }
-                return _logic;
+                return _Logic;
             }
         }
 
@@ -74,49 +74,107 @@ namespace UI.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
+            if (getPersonaActual().TipoPersona.ToString() == "Administrador")
             {
-                LoadGrid();
+                if (!Page.IsPostBack)
+                {
+                    try {
+                        EspecialidadLogic el = new EspecialidadLogic();
+                        this.LoadGrid();
+                        this.ddlEspecialidad.DataSource = el.GetAll();
+                        this.ddlEspecialidad.DataBind();
+                        this.lblError.Text = "";
+                    }
+                    catch (Exception ex)
+                    {
+                        this.lblError.Text = ex.Message;
+                    }
+                }
+            }
+            else
+            {
+                this.gridPanel.Visible = false;
+                this.gridActionsPanel.Visible = false;
+                this.formPanel.Visible = false;
+                this.lblError.Text = "Autorización denegada";
             }
 
         }
 
+        public Usuario UsuarioActual
+        {
+            get { return (Usuario)Session["UsuarioActual"]; }
+        }
+
+        public Persona getPersonaActual()
+        {
+            PersonaLogic pl = new PersonaLogic();
+            Persona p = pl.GetOne(UsuarioActual.Persona.ID);
+            return p;
+        }
+
         protected void LoadGrid()
         {
-            this.gvListadoPlanes.DataSource = this.Logic.GetAll();
-            this.gvListadoPlanes.DataBind();
+            try
+            {
+                this.gvListadoPlanes.DataSource = this.Logic.GetAll();
+                this.gvListadoPlanes.DataBind();
+            }
+            catch (Exception ex)
+            {
+                this.lblError.Text = ex.Message;
+            }
         }
 
         private void loadForm(int id)
         {
             this.Entity = this.Logic.GetOne(id);
-            this.descripcionTextBox.Text = this.Entity.Descripcion;
+            this.txtDescripcion.Text = this.Entity.Descripcion;
+            this.ddlEspecialidad.SelectedValue = this.Entity.Especialidad.ID.ToString();
         }
 
         private void EnableForm(bool enable)
         {
-            this.descripcionTextBox.Enabled = enable;
+            this.txtDescripcion.Enabled = enable;
+            this.ddlEspecialidad.Enabled = enable;
         }
 
         private void ClearForm()
         {
-            this.descripcionTextBox.Text = string.Empty;
+            this.txtDescripcion.Text = string.Empty;
         }
 
         private void LoadEntity(Plan plan)
         {
-            plan.Descripcion = this.descripcionTextBox.Text;
-            plan.ID = int.Parse(this.IdEspecialidad.Text);
+            plan.Especialidad = new Especialidad();
+            plan.Descripcion = this.txtDescripcion.Text;
+            plan.Especialidad.ID = int.Parse(ddlEspecialidad.SelectedValue);
         }
 
         private void SaveEntity(Plan plan)
         {
-            this.Logic.Save(plan);
+            try 
+            { 
+                this.Logic.Save(plan);
+                this.lblError.Text = "";
+            }
+            catch (Exception ex)
+            {
+                this.lblError.Text = ex.Message;
+            }
         }
 
         private void DeleteEntity(int id)
         {
-            this.Logic.Delete(id);
+            try 
+            { 
+                this.Logic.Delete(id);
+                this.lblError.Text = "";
+            }
+            catch (Exception ex)
+            {
+                this.lblError.Text = ex.Message;
+            }
         }
 
         protected void gridView_SelectedIndexChanged(object sender, EventArgs e)
@@ -164,12 +222,14 @@ namespace UI.Web
                     this.LoadEntity(this.Entity);
                     this.SaveEntity(this.Entity);
                     this.LoadGrid();
+                    this.formPanel.Visible = false;
                     break;
                 case FormModes.Baja:
                     this.DeleteEntity(this.SelectedID);
                     this.LoadGrid();
                     this.gvListadoPlanes.SelectedIndex = -1;
                     this.SelectedID = 0;
+                    this.formPanel.Visible = false;
                     break;
                 case FormModes.Modificacion:
                     this.Entity = new Plan();
@@ -177,6 +237,7 @@ namespace UI.Web
                     this.Entity.State = BusinessEntity.States.Modified;
                     this.LoadEntity(this.Entity);
                     this.SaveEntity(this.Entity);
+                    this.formPanel.Visible = false;
                     this.LoadGrid();
                     break;
                 default:

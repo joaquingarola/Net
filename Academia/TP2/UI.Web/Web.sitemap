@@ -1,7 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-	<siteMapNode url="" title="Home"  description="" >
-		<siteMapNode url="~/Usuarios.aspx" title="Usuarios"  description="Usuarios" />
-		<siteMapNode url="~/Especialidades.aspx" title="Especialidades"  description="Especialidades" />
+	<siteMapNode url="~/Default.aspx" title="Menú" roles="Administrador, Profesor, Alumno">
+		<siteMapNode url="" title="Administrador" roles="Administrador">
+			<siteMapNode url="~/Personas.aspx" title="Personas"  description="Personas" roles="Administrador"/>
+			<siteMapNode url="~/Usuarios.aspx" title="Usuarios"  description="Usuarios" roles="Administrador"/>
+			<siteMapNode url="~/Especialidades.aspx" title="Especialidades"  description="Especialidades" roles="Administrador" />
+			<siteMapNode url="~/Planes.aspx" title="Planes"  description="Planes" roles="Administrador" />
+			<siteMapNode url="~/Materias.aspx" title="Materias"  description="Materias" roles="Administrador" />
+			<siteMapNode url="~/Comisiones.aspx" title="Comisiones"  description="Comisiones" roles="Administrador" />
+			<siteMapNode url="~/Cursos.aspx" title="Cursos"  description="Cursos" roles="Administrador" />
+			<siteMapNode url="~/DocentesCursos.aspx" title="Asignar docentes a cursos"  description="Asignar docentes a cursos" roles="Administrador" />
+			<siteMapNode url="~/ReportCursos.aspx" title="Reporte cursos"  description="Reporte cursos" roles="Administrador" />
+			<siteMapNode url="~/ReportePlanes.aspx" title="Reporte planes"  description="Reporte planes" roles="Administrador" />
+		</siteMapNode>
+		<siteMapNode url="" title="Profesor" roles="Profesor">
+			<siteMapNode url="~/RegistroNotas.aspx" title="Registrar notas"  description="Registrar notas" roles="Profesor" />
+		</siteMapNode>
+		<siteMapNode url="" title="Alumno" roles="Alumno">
+			<siteMapNode url="~/InscripcionAlumno.aspx" title="Inscripción a materias"  description="Inscripción a materias" roles="Alumno" />
+			<siteMapNode url="~/VerInscripcionesAlumno.aspx" title="Ver inscripciones"  description="Ver inscripciones" roles="Alumno" />
+		</siteMapNode>
 	</siteMapNode>
 </siteMap>

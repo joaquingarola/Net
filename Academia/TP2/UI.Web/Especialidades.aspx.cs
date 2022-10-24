@@ -11,6 +11,19 @@ namespace UI.Web
 {
     public partial class Especialidades : System.Web.UI.Page
     {
+
+        public Usuario UsuarioActual
+        {
+            get { return (Usuario)Session["UsuarioActual"]; }
+        }
+
+        public Persona getPersonaActual()
+        {
+            PersonaLogic pl = new PersonaLogic();
+            Persona p = pl.GetOne(UsuarioActual.Persona.ID);
+            return p;
+        }
+
         EspecialidadLogic _logic;
 
         public enum FormModes
@@ -73,22 +86,39 @@ namespace UI.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
+            if (getPersonaActual().TipoPersona.ToString() == "Administrador")
             {
-                LoadGrid();
+                if (!Page.IsPostBack)
+                {
+                    this.LoadGrid();
+                }
             }
-        }
+            else
+            {
+                this.gridPanel.Visible = false;
+                this.gridActionsPanel.Visible = false;
+                this.formPanel.Visible = false;
+                this.lblError.Text = "Autorización denegada";
+            }
+}
 
         private void LoadGrid()
         {
-            this.gridView.DataSource = this.Logic.GetAll();
-            this.gridView.DataBind();
+            try
+            {
+                this.gridView.DataSource = this.Logic.GetAll();
+                this.gridView.DataBind();
+            }
+            catch (Exception ex)
+            {
+                this.lblError.Text = ex.Message;
+            }
         }
 
         private void loadForm(int id)
         {
             this.Entity = this.Logic.GetOne(id);
-            this.descripcionTextBox.Text = this.Entity.Descripcion;
+            this.txtDescripcion.Text = this.Entity.Descripcion;
         }
 
         protected void gridView_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,12 +140,20 @@ namespace UI.Web
 
         private void LoadEntity(Especialidad especialidad)
         {
-            especialidad.Descripcion = this.descripcionTextBox.Text;
+            especialidad.Descripcion = this.txtDescripcion.Text;
         }
 
         private void SaveEntity(Especialidad especialidad)
         {
-            this.Logic.Save(especialidad);
+            try 
+            { 
+                this.Logic.Save(especialidad);
+                this.lblError.Text = "";
+            }
+            catch (Exception ex)
+            {
+                this.lblError.Text = ex.Message;
+            }
         }
 
         protected void aceptarLinkButton_Click(object sender, EventArgs e)
@@ -150,7 +188,7 @@ namespace UI.Web
 
         private void EnableForm(bool enable)
         {
-            this.descripcionTextBox.Enabled = enable;
+            this.txtDescripcion.Enabled = enable;
         }
 
         protected void eliminarLinkButton_Click(object sender, EventArgs e)
@@ -166,7 +204,15 @@ namespace UI.Web
 
         private void DeleteEntity(int id)
         {
-            this.Logic.Delete(id);
+            try
+            { 
+                this.Logic.Delete(id);
+                this.lblError.Text = "";
+            }
+            catch (Exception ex)
+            {
+                this.lblError.Text = ex.Message;
+            }
         }
 
         protected void nuevoLinkButton_Click(object sender, EventArgs e)
@@ -179,7 +225,7 @@ namespace UI.Web
 
         private void ClearForm()
         {
-            this.descripcionTextBox.Text = string.Empty;
+            this.txtDescripcion.Text = string.Empty;
         }
 
         protected void cancelarLinkButton_Click(object sender, EventArgs e)

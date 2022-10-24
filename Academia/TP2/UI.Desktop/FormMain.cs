@@ -62,12 +62,16 @@ namespace UI.Desktop
                     case Persona.TipoPersonas.Alumno:
                         this.mnuABMC.Visible = false;
                         this.mnuRegistroNotas.Visible = false;
+                        this.mnuReporteCursos.Visible = false;
+                        this.mnuReportePlanes.Visible = false;
                         break;
 
                     case Persona.TipoPersonas.Profesor:
                         this.mnuABMC.Visible = false;
                         this.mnuInscripcionCursado.Visible = false;
                         this.mnuVerInscripciones.Visible = false;
+                        this.mnuReporteCursos.Visible = false;
+                        this.mnuReportePlanes.Visible = false;
                         break;
                 }
             }
@@ -132,6 +136,18 @@ namespace UI.Desktop
         {
             RegistroNotas appRegistroNotas = new RegistroNotas(Pers);
             appRegistroNotas.Show();
+        }
+
+        private void mnuReporteCursos_Click(object sender, EventArgs e)
+        {
+            ReporteCursos appReporte = new ReporteCursos();
+            appReporte.Show();
+        }
+
+        private void mnuReportePlanes_Click(object sender, EventArgs e)
+        {
+            ReportePlanes appReporte = new ReportePlanes();
+            appReporte.Show();
         }
     }
 }

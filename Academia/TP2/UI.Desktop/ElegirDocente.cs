@@ -23,7 +23,7 @@ namespace UI.Desktop
             PersonaLogic pl = new PersonaLogic();
             try
             {
-                this.cmbDocente.DataSource = pl.GetAll(Persona.TipoPersonas.Profesor);
+                this.cmbDocente.DataSource = pl.GetAll(Persona.TipoPersonas.Profesor, cur.Materia.Plan.ID);
                 this.cmbDocente.DisplayMember = "DescripcionFull";
                 this.cmbDocente.AutoCompleteMode = AutoCompleteMode.Suggest;
                 this.cmbDocente.AutoCompleteSource = AutoCompleteSource.ListItems;

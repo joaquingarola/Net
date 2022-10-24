@@ -53,15 +53,15 @@ namespace UI.Desktop
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnAceptar, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.btnCancelar, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.cmbComision, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.cmbMateria, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtAnioCalendario, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtCupo, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cmbMateria, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.cmbComision, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -109,7 +109,7 @@ namespace UI.Desktop
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(86, 144);
+            this.label4.Location = new System.Drawing.Point(86, 187);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 3;
@@ -119,7 +119,7 @@ namespace UI.Desktop
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(89, 187);
+            this.label5.Location = new System.Drawing.Point(89, 144);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 4;
@@ -151,7 +151,7 @@ namespace UI.Desktop
             // 
             this.cmbComision.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbComision.FormattingEnabled = true;
-            this.cmbComision.Location = new System.Drawing.Point(262, 140);
+            this.cmbComision.Location = new System.Drawing.Point(262, 183);
             this.cmbComision.Name = "cmbComision";
             this.cmbComision.Size = new System.Drawing.Size(140, 21);
             this.cmbComision.TabIndex = 7;
@@ -161,7 +161,7 @@ namespace UI.Desktop
             // 
             this.cmbMateria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbMateria.FormattingEnabled = true;
-            this.cmbMateria.Location = new System.Drawing.Point(262, 183);
+            this.cmbMateria.Location = new System.Drawing.Point(262, 140);
             this.cmbMateria.Name = "cmbMateria";
             this.cmbMateria.Size = new System.Drawing.Size(140, 21);
             this.cmbMateria.TabIndex = 8;

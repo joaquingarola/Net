@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
 
     <asp:Panel ID="gridPanel" runat="server">
-        <asp:GridView ID="gvListadoPlanes" runat="server" AutoGenerateColumns="false"
+        <asp:GridView ID="gvListadoPlanes" runat="server" AutoGenerateColumns="False"
             SelectedRowStyle-BackColor="Black"
             SelectedRowStyle-ForeColor="White"
             DataKeyNames="ID"
@@ -10,10 +10,16 @@
             <Columns>
                 <asp:BoundField HeaderText="ID Plan" DataField="ID" />
                 <asp:BoundField HeaderText="Descripcion Plan" DataField="Descripcion" />
+                <asp:BoundField DataField="Especialidad.Descripcion" HeaderText="Especialidad" />
                 <asp:CommandField SelectText="Seleccionar" ShowSelectButton="True" /> 
             </Columns>
+            <SelectedRowStyle BackColor="Black" ForeColor="White" />
         </asp:GridView>
+        
     </asp:Panel>
+
+    <br />
+    <asp:Label ID="lblError" runat="server" Font-Bold="True" ForeColor="#CC3300"></asp:Label>
 
      <asp:Panel ID="gridActionsPanel" runat="server">
         <asp:LinkButton ID="editarLinkButton" runat="server" OnClick="editarLinkButton_Click">Editar</asp:LinkButton>
@@ -24,20 +30,23 @@
     <asp:Panel ID="formPanel" Visible="false" runat="server">
 
         <asp:Label ID="descripcionLabel" runat="server" Text="Descripcion: "></asp:Label>
-        <asp:TextBox ID="descripcionTextBox" runat="server"></asp:TextBox><br />
-        <asp:Label ID="Label1" runat="server" Text="ID Especialidad: "></asp:Label>
-        <asp:TextBox ID="IdEspecialidad" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtDescripcion" runat="server"></asp:TextBox>
         <asp:RequiredFieldValidator 
             ID="RequiredFieldValidatorDescripcion" 
             runat="server"
             ErrorMessage="Por favor ingrese una descripción" 
-            ControlToValidate="descripcionTextBox"
+            ControlToValidate="txtDescripcion"
             Display="Dynamic" 
             ForeColor="red"
             ValidationGroup="a"
             SetFocusOnError="True">
             *
         </asp:RequiredFieldValidator>
+
+        <br />
+
+        <asp:Label ID="lblEspecialidad" runat="server" Text="Especialidad: "></asp:Label>
+        <asp:DropDownList ID="ddlEspecialidad" runat="server" DataTextField="Descripcion" DataValueField="ID"></asp:DropDownList>
         <br />
 
         <asp:ValidationSummary 

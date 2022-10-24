@@ -16,20 +16,24 @@ namespace UI.Web
 
         }
 
-        public Usuario User { get; set; }
+        public Usuario Usr { get; set; }
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
             //Valido Nombre de Usuario y Contraseña
+            lblIncorrecto.Visible = false;
             UsuarioLogic ul = new UsuarioLogic();
-            User = ul.GetOne(this.txtUsuario.Text, this.txtClave.Text);
-            if (User.NombreUsuario == this.txtUsuario.Text && this.txtClave.Text == User.Clave)
+            Usr = ul.GetOne(this.txtUsuario.Text, this.txtClave.Text);
+            if (Usr.ID != 0)
             {
+                Session["UsuarioActual"] = Usr;
                 Response.Redirect("~/Default.aspx");
+                
             }
             else
             {
-                Page.Response.Write("Usuario y/o contraseña incorrectos");
+                lblIncorrecto.Text = "Usuario y/o contraseña incorrecto";
+                lblIncorrecto.Visible = true;
             }
         }
 

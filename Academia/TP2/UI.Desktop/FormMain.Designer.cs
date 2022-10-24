@@ -42,8 +42,10 @@ namespace UI.Desktop
             this.mnuItemComisiones = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemCursos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuInscripcionCursado = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuRegistroNotas = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuVerInscripciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegistroNotas = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReporteCursos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReportePlanes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +82,9 @@ namespace UI.Desktop
             this.mnuABMC,
             this.mnuInscripcionCursado,
             this.mnuVerInscripciones,
-            this.mnuRegistroNotas});
+            this.mnuRegistroNotas,
+            this.mnuReporteCursos,
+            this.mnuReportePlanes});
             this.mnuMenu.Name = "mnuMenu";
             this.mnuMenu.Size = new System.Drawing.Size(50, 20);
             this.mnuMenu.Text = "Menu";
@@ -155,6 +159,13 @@ namespace UI.Desktop
             this.mnuInscripcionCursado.Text = "Inscripción a cursado";
             this.mnuInscripcionCursado.Click += new System.EventHandler(this.mnuInscripcionCursado_Click);
             // 
+            // mnuVerInscripciones
+            // 
+            this.mnuVerInscripciones.Name = "mnuVerInscripciones";
+            this.mnuVerInscripciones.Size = new System.Drawing.Size(186, 22);
+            this.mnuVerInscripciones.Text = "Ver inscripciones";
+            this.mnuVerInscripciones.Click += new System.EventHandler(this.mnuVerInscripciones_Click);
+            // 
             // mnuRegistroNotas
             // 
             this.mnuRegistroNotas.Name = "mnuRegistroNotas";
@@ -162,12 +173,19 @@ namespace UI.Desktop
             this.mnuRegistroNotas.Text = "Registro de notas";
             this.mnuRegistroNotas.Click += new System.EventHandler(this.mnuRegistroDeNotas_Click);
             // 
-            // mnuVerInscripciones
+            // mnuReporteCursos
             // 
-            this.mnuVerInscripciones.Name = "mnuVerInscripciones";
-            this.mnuVerInscripciones.Size = new System.Drawing.Size(186, 22);
-            this.mnuVerInscripciones.Text = "Ver inscripciones";
-            this.mnuVerInscripciones.Click += new System.EventHandler(this.mnuVerInscripciones_Click);
+            this.mnuReporteCursos.Name = "mnuReporteCursos";
+            this.mnuReporteCursos.Size = new System.Drawing.Size(186, 22);
+            this.mnuReporteCursos.Text = "Reporte cursos";
+            this.mnuReporteCursos.Click += new System.EventHandler(this.mnuReporteCursos_Click);
+            // 
+            // mnuReportePlanes
+            // 
+            this.mnuReportePlanes.Name = "mnuReportePlanes";
+            this.mnuReportePlanes.Size = new System.Drawing.Size(186, 22);
+            this.mnuReportePlanes.Text = "Reporte planes";
+            this.mnuReportePlanes.Click += new System.EventHandler(this.mnuReportePlanes_Click);
             // 
             // FormMain
             // 
@@ -204,5 +222,7 @@ namespace UI.Desktop
         private System.Windows.Forms.ToolStripMenuItem mnuInscripcionCursado;
         private System.Windows.Forms.ToolStripMenuItem mnuRegistroNotas;
         private System.Windows.Forms.ToolStripMenuItem mnuVerInscripciones;
+        private System.Windows.Forms.ToolStripMenuItem mnuReporteCursos;
+        private System.Windows.Forms.ToolStripMenuItem mnuReportePlanes;
     }
 }
