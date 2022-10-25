@@ -175,6 +175,7 @@ namespace UI.Desktop
             // 
             this.cmbPlan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.SetColumnSpan(this.cmbPlan, 2);
+            this.cmbPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPlan.Enabled = false;
             this.cmbPlan.FormattingEnabled = true;
             this.cmbPlan.Location = new System.Drawing.Point(298, 59);

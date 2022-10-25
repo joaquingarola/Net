@@ -72,16 +72,16 @@ namespace UI.Desktop
             {
                 this.cmbMateria.DataSource = ml.GetAll();
                 this.cmbMateria.DisplayMember = "Descripcion";
-                this.cmbMateria.AutoCompleteMode = AutoCompleteMode.Suggest;
-                this.cmbMateria.AutoCompleteSource = AutoCompleteSource.ListItems;
+                // this.cmbMateria.AutoCompleteMode = AutoCompleteMode.Suggest;
+                // this.cmbMateria.AutoCompleteSource = AutoCompleteSource.ListItems;
 
                 PlanLogic pl = new PlanLogic();
                 Plan p = pl.GetOne(SelectedMateria.Plan.ID);
 
                 this.cmbComision.DataSource = cl.GetComisionesPlan(p);
                 this.cmbComision.DisplayMember = "Descripcion";
-                this.cmbComision.AutoCompleteMode = AutoCompleteMode.Suggest;
-                this.cmbComision.AutoCompleteSource = AutoCompleteSource.ListItems;
+                // this.cmbComision.AutoCompleteMode = AutoCompleteMode.Suggest;
+                // this.cmbComision.AutoCompleteSource = AutoCompleteSource.ListItems;
             }
             catch (Exception ExcepcionManejada)
             {
@@ -167,9 +167,18 @@ namespace UI.Desktop
         }
         public override bool Validar()
         {
-            if (Validaciones.IsEmpty(txtAnioCalendario.Text) || Validaciones.IsEmpty(txtCupo.Text))
+            string msg = "";
+            if (Validaciones.IsEmpty(txtAnioCalendario.Text))
             {
-                Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                msg += "\n- Complete con el año calendario";
+            }
+            if (Validaciones.IsEmpty(txtCupo.Text))
+            {
+                msg += "\n- Complete con el cupo";
+            }
+            if (msg != "")
+            {
+                Notificar("Por favor: " + msg, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else if (!int.TryParse(txtAnioCalendario.Text, out int result) || !int.TryParse(txtCupo.Text, out int result2))
@@ -244,8 +253,8 @@ namespace UI.Desktop
             ComisionLogic cl = new ComisionLogic();
             this.cmbComision.DataSource = cl.GetComisionesPlan(p);
             this.cmbComision.DisplayMember = "Descripcion";
-            this.cmbComision.AutoCompleteMode = AutoCompleteMode.Suggest;
-            this.cmbComision.AutoCompleteSource = AutoCompleteSource.ListItems;
+            // this.cmbComision.AutoCompleteMode = AutoCompleteMode.Suggest;
+            // this.cmbComision.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
     }
 }

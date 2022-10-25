@@ -67,6 +67,7 @@ namespace UI.Desktop
             // 
             this.cmbDocente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.SetColumnSpan(this.cmbDocente, 2);
+            this.cmbDocente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDocente.FormattingEnabled = true;
             this.cmbDocente.Location = new System.Drawing.Point(121, 42);
             this.cmbDocente.Name = "cmbDocente";
@@ -133,6 +134,7 @@ namespace UI.Desktop
             // 
             this.cmbCargo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.SetColumnSpan(this.cmbCargo, 2);
+            this.cmbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCargo.FormattingEnabled = true;
             this.cmbCargo.Location = new System.Drawing.Point(146, 148);
             this.cmbCargo.Name = "cmbCargo";

@@ -105,7 +105,7 @@ namespace UI.Desktop
         {
             if (Validaciones.IsEmpty(txtDescripcion.Text))
             {
-                Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Notificar("Por favor ingrese una descripción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else return true;

@@ -143,6 +143,7 @@ namespace UI.Desktop
             // 
             this.cmbEspecialidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.SetColumnSpan(this.cmbEspecialidad, 2);
+            this.cmbEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEspecialidad.FormattingEnabled = true;
             this.cmbEspecialidad.Location = new System.Drawing.Point(198, 122);
             this.cmbEspecialidad.Name = "cmbEspecialidad";

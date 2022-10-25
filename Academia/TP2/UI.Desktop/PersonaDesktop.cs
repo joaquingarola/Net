@@ -70,8 +70,8 @@ namespace UI.Desktop
             {
                 this.cmbPlan.DataSource = pl.GetAll();
                 this.cmbPlan.DisplayMember = "DescripcionFull";
-                this.cmbPlan.AutoCompleteMode = AutoCompleteMode.Suggest;
-                this.cmbPlan.AutoCompleteSource = AutoCompleteSource.ListItems;
+                // this.cmbPlan.AutoCompleteMode = AutoCompleteMode.Suggest;
+                // this.cmbPlan.AutoCompleteSource = AutoCompleteSource.ListItems;
             }
             catch (Exception ExcepcionManejada)
             {
@@ -166,19 +166,43 @@ namespace UI.Desktop
 
         public override bool Validar()
         {
-            if (Validaciones.IsEmpty(txtNombre.Text) || Validaciones.IsEmpty(txtApellido.Text) || Validaciones.IsEmpty(txtFechaNac.Text))
+            string msg = "";
+            if (Validaciones.IsEmpty(txtNombre.Text))
             {
-                Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+                msg += "\n- Complete con un nombre";
             }
-            else if (!int.TryParse(txtLegajo.Text, out int result) && tipoPers != Persona.TipoPersonas.Administrador)
+            if (Validaciones.IsEmpty(txtApellido.Text))
             {
-                Notificar("Legajo debe ser un número", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                msg += "\n- Complete con un apellido";
+            }
+            if (Validaciones.IsEmpty(txtFechaNac.Text))
+            {
+                msg += "\n- Complete con una fecha de nacimiento";
+            }
+            if (Validaciones.IsEmpty(txtLegajo.Text) && tipoPers != Persona.TipoPersonas.Administrador)
+            {
+                msg += "\n- Complete con un legajo";
+            }
+            if (Validaciones.IsEmpty(txtDireccion.Text))
+            {
+                msg += "\n- Complete con una dirección";
+            }
+            if (Validaciones.IsEmpty(txtEmail.Text))
+            {
+                msg += "\n- Complete con un email";
+            }
+            if (Validaciones.IsEmpty(txtTelefono.Text))
+            {
+                msg += "\n- Complete con un teléfono";
+            }
+            if (msg != "")
+            {
+                Notificar("Por favor: " + msg, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else if (!DateTime.TryParse(txtFechaNac.Text, out DateTime result2))
             {
-                Notificar("Fecha incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Notificar("Formato de fecha incorrecta --> DD/MM/AAAA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
             else if (!Validaciones.EsMailValido(txtEmail.Text) && !Validaciones.IsEmpty(txtEmail.Text))

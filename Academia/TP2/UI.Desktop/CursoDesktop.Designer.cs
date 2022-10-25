@@ -33,15 +33,15 @@ namespace UI.Desktop
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.cmbComision = new System.Windows.Forms.ComboBox();
-            this.cmbMateria = new System.Windows.Forms.ComboBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtAnioCalendario = new System.Windows.Forms.TextBox();
             this.txtCupo = new System.Windows.Forms.TextBox();
+            this.cmbMateria = new System.Windows.Forms.ComboBox();
+            this.cmbComision = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,26 +105,6 @@ namespace UI.Desktop
             this.label3.TabIndex = 2;
             this.label3.Text = "Cupos";
             // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(86, 187);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Comisión";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(89, 144);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Materia";
-            // 
             // btnAceptar
             // 
             this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -146,26 +126,6 @@ namespace UI.Desktop
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // cmbComision
-            // 
-            this.cmbComision.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbComision.FormattingEnabled = true;
-            this.cmbComision.Location = new System.Drawing.Point(262, 183);
-            this.cmbComision.Name = "cmbComision";
-            this.cmbComision.Size = new System.Drawing.Size(140, 21);
-            this.cmbComision.TabIndex = 7;
-            this.cmbComision.SelectedIndexChanged += new System.EventHandler(this.cmbComision_SelectedIndexChanged);
-            // 
-            // cmbMateria
-            // 
-            this.cmbMateria.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbMateria.FormattingEnabled = true;
-            this.cmbMateria.Location = new System.Drawing.Point(262, 140);
-            this.cmbMateria.Name = "cmbMateria";
-            this.cmbMateria.Size = new System.Drawing.Size(140, 21);
-            this.cmbMateria.TabIndex = 8;
-            this.cmbMateria.SelectedIndexChanged += new System.EventHandler(this.cmbMateria_SelectedIndexChanged);
             // 
             // txtID
             // 
@@ -194,6 +154,48 @@ namespace UI.Desktop
             this.txtCupo.Size = new System.Drawing.Size(100, 20);
             this.txtCupo.TabIndex = 11;
             this.txtCupo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCupo_KeyPress);
+            // 
+            // cmbMateria
+            // 
+            this.cmbMateria.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbMateria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMateria.FormattingEnabled = true;
+            this.cmbMateria.Location = new System.Drawing.Point(262, 140);
+            this.cmbMateria.Name = "cmbMateria";
+            this.cmbMateria.Size = new System.Drawing.Size(140, 21);
+            this.cmbMateria.TabIndex = 8;
+            this.cmbMateria.SelectedIndexChanged += new System.EventHandler(this.cmbMateria_SelectedIndexChanged);
+            // 
+            // cmbComision
+            // 
+            this.cmbComision.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbComision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbComision.FormattingEnabled = true;
+            this.cmbComision.Location = new System.Drawing.Point(262, 183);
+            this.cmbComision.Name = "cmbComision";
+            this.cmbComision.Size = new System.Drawing.Size(140, 21);
+            this.cmbComision.TabIndex = 7;
+            this.cmbComision.SelectedIndexChanged += new System.EventHandler(this.cmbComision_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(89, 144);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Materia";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(86, 187);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Comisión";
             // 
             // CursoDesktop
             // 

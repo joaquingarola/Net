@@ -157,9 +157,22 @@ namespace UI.Desktop
 
         public override bool Validar()
         {
-            if (Validaciones.IsEmpty(txtDescripcion.Text) || Validaciones.IsEmpty(txtHSSemanales.Text) || Validaciones.IsEmpty(txtHSTotales.Text))
+            string msg = "";
+            if (Validaciones.IsEmpty(txtDescripcion.Text))
             {
-                Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                msg += "\n- Complete con una descripción";
+            }
+            if (Validaciones.IsEmpty(txtHSSemanales.Text))
+            {
+                msg += "\n- Complete las horas semanales";
+            }
+            if (Validaciones.IsEmpty(txtHSTotales.Text))
+            {
+                msg += "\n- Complete las horas totales";
+            }
+            if (msg != "")
+            {
+                Notificar("Por favor: " + msg, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else if (cmbPlan.SelectedItem == null)

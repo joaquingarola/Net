@@ -25,8 +25,8 @@ namespace UI.Desktop
             {
                 this.cmbDocente.DataSource = pl.GetAll(Persona.TipoPersonas.Profesor, cur.Materia.Plan.ID);
                 this.cmbDocente.DisplayMember = "DescripcionFull";
-                this.cmbDocente.AutoCompleteMode = AutoCompleteMode.Suggest;
-                this.cmbDocente.AutoCompleteSource = AutoCompleteSource.ListItems;
+                // this.cmbDocente.AutoCompleteMode = AutoCompleteMode.Suggest;
+                // this.cmbDocente.AutoCompleteSource = AutoCompleteSource.ListItems;
             }
             catch (Exception ExcepcionManejada)
             {

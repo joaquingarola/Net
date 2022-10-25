@@ -58,8 +58,8 @@ namespace UI.Desktop
             {
                 this.cmbPersona.DataSource = pl.GetAll();
                 this.cmbPersona.DisplayMember = "DescripcionFull";
-                this.cmbPersona.AutoCompleteMode = AutoCompleteMode.Suggest;
-                this.cmbPersona.AutoCompleteSource = AutoCompleteSource.ListItems;
+                // this.cmbPersona.AutoCompleteMode = AutoCompleteMode.Suggest;
+                // this.cmbPersona.AutoCompleteSource = AutoCompleteSource.ListItems;
             }
             catch (Exception ExcepcionManejada)
             {
@@ -180,29 +180,36 @@ namespace UI.Desktop
 
         public override bool Validar() 
         {
-            Boolean EsValido = true;
-
-            if (Validaciones.IsEmpty(txtClave.Text) || Validaciones.IsEmpty(txtUsuario.Text))
+            string msg = "";
+            if (Validaciones.IsEmpty(txtClave.Text))
             {
-                Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                EsValido = false;
+                msg += "\n- Complete con una contraseña";
+            }
+            if (Validaciones.IsEmpty(txtUsuario.Text))
+            {
+                msg += "\n- Complete un nombre de usuario";
+            }
+            if (msg != "")
+            {
+                Notificar("Por favor: " + msg, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             else if (this.txtClave.Text != this.txtConfirmarClave.Text)
             {
-                EsValido = false;
                 this.Notificar("La clave no coincide con la confirmacion de la misma", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             else if (this.txtClave.Text.Length < 8)
             {
-                EsValido = false;
                 this.Notificar("La clave debe tener al menos 8 caracteres", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             else if (cmbPersona.SelectedItem == null && !chkAdmin.Checked)
             {
                 this.Notificar("Debe seleccionar un legajo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
-            return EsValido;
+            return true;
         }
 
         #endregion

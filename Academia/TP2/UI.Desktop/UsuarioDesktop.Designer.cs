@@ -185,6 +185,7 @@ namespace UI.Desktop
             // cmbPersona
             // 
             this.cmbPersona.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPersona.FormattingEnabled = true;
             this.cmbPersona.Location = new System.Drawing.Point(90, 34);
             this.cmbPersona.Name = "cmbPersona";

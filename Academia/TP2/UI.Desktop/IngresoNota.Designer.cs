@@ -85,6 +85,7 @@ namespace UI.Desktop
             // 
             this.cmbCondicion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.SetColumnSpan(this.cmbCondicion, 2);
+            this.cmbCondicion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCondicion.FormattingEnabled = true;
             this.cmbCondicion.Location = new System.Drawing.Point(131, 23);
             this.cmbCondicion.Name = "cmbCondicion";
@@ -97,6 +98,7 @@ namespace UI.Desktop
             // 
             this.cmbNota.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.SetColumnSpan(this.cmbNota, 2);
+            this.cmbNota.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNota.FormattingEnabled = true;
             this.cmbNota.Location = new System.Drawing.Point(131, 90);
             this.cmbNota.Name = "cmbNota";

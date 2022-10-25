@@ -48,8 +48,8 @@ namespace UI.Desktop
             {
                 this.cmbEspecialidad.DataSource = el.GetAll();
                 this.cmbEspecialidad.DisplayMember = "Descripcion";
-                this.cmbEspecialidad.AutoCompleteMode = AutoCompleteMode.Suggest;
-                this.cmbEspecialidad.AutoCompleteSource = AutoCompleteSource.ListItems;
+                // this.cmbEspecialidad.AutoCompleteMode = AutoCompleteMode.Suggest;
+                // this.cmbEspecialidad.AutoCompleteSource = AutoCompleteSource.ListItems;
             }
             catch (Exception e)
             {
@@ -130,7 +130,7 @@ namespace UI.Desktop
         {
             if (Validaciones.IsEmpty(txtDescripcion.Text))
             {
-                Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Notificar("Ingrese una descripción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else if (cmbEspecialidad.SelectedItem == null)

@@ -29,8 +29,8 @@ namespace UI.Desktop
             {
                 this.cmbCurso.DataSource = cl.getCursosDocente(docente);
                 this.cmbCurso.DisplayMember = "Descripcion";
-                this.cmbCurso.AutoCompleteMode = AutoCompleteMode.Suggest;
-                this.cmbCurso.AutoCompleteSource = AutoCompleteSource.ListItems;
+                // this.cmbCurso.AutoCompleteMode = AutoCompleteMode.Suggest;
+                // this.cmbCurso.AutoCompleteSource = AutoCompleteSource.ListItems;
             }
             catch (Exception ExcepcionManejada)
             {

@@ -48,8 +48,8 @@ namespace UI.Desktop
             {
                 this.cmbPlan.DataSource = pl.GetAll();
                 this.cmbPlan.DisplayMember = "DescripcionFull";
-                this.cmbPlan.AutoCompleteMode = AutoCompleteMode.Suggest;
-                this.cmbPlan.AutoCompleteSource = AutoCompleteSource.ListItems;
+                //this.cmbPlan.AutoCompleteMode = AutoCompleteMode.Suggest;
+                //this.cmbPlan.AutoCompleteSource = AutoCompleteSource.ListItems;
             }
             catch (Exception e)
             {
@@ -126,11 +126,21 @@ namespace UI.Desktop
                 Notificar(ExcepcionManejada.Message, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
         public override bool Validar()
         {
-            if (Validaciones.IsEmpty(txtDescripcion.Text) || Validaciones.IsEmpty(txtAnioEspecialidad.Text))
+            string msg = "";
+            if (Validaciones.IsEmpty(txtDescripcion.Text))
             {
-                Notificar("Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                msg += "\n- Complete con una descripción";
+            }
+            if (Validaciones.IsEmpty(txtAnioEspecialidad.Text))
+            {
+                msg += "\n- Complete el año de especialidad";
+            }
+            if (msg != "")
+            {
+                Notificar("Por favor: " + msg, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else if (!int.TryParse(txtAnioEspecialidad.Text, out int result))
