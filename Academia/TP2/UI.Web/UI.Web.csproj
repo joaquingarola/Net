@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Comisiones.aspx" />
+    <Content Include="css\Style.css" />
     <Content Include="Cursos.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DocentesCursos.aspx" />

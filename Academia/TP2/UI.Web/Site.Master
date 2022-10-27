@@ -5,11 +5,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <title>Academia</title>
+        <asp:ContentPlaceHolder ID="Stylesheets" runat="server">
+            <link rel="stylesheet" href="/css/Style.css" type="text/css" />
+        </asp:ContentPlaceHolder>
     </head>
     <body>
         <form id="bodyForm" runat="server">
-            <asp:Menu runat="server" ID="menu" DataSourceID="SiteMapDataSource"></asp:Menu>
-            <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
+            <asp:Menu ID="menu" runat="server" MaximumDynamicDisplayLevels="0" StaticDisplayLevels="10" DataSourceID="SiteMapDataSource" Orientation="Horizontal" CssClass="menu" StaticMenuStyle-CssClass="list">
+                <StaticItemTemplate>
+                    <asp:HyperLink ID="lnkItem" runat="Server" CssClass='item'
+                        NavigateUrl='<%# Eval("NavigateUrl") %>' Text='<%# Eval("Text") %>' />
+                </StaticItemTemplate>
+            </asp:Menu>
+            <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" ShowStartingNode="False"/>
             <div>
                 <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
                 </asp:ContentPlaceHolder>

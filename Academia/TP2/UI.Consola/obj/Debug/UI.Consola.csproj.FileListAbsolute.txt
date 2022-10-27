@@ -1,0 +1,2 @@
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Consola\obj\Debug\UI.Consola.csproj.CoreCompileInputs.cache
+C:\Users\joaqu\Desktop\Facultad\2022\Net\Academia\TP2\UI.Consola\obj\Debug\UI.Consola.csproj.AssemblyReference.cache

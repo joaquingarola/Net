@@ -39,7 +39,7 @@ namespace UI.Web
 
         protected void lnkRecordarClave_Click(object sender, EventArgs e)
         {
-            Page.Response.Write("Usted es un usuario muy olvidadizo, haga memoria");
+            lblIncorrecto.Text = "Usted es un usuario muy olvidadizo, haga memoria";
         }
     }
 }

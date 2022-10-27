@@ -527,7 +527,7 @@
   <Width>7.01351in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>3.06917cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -626,7 +626,7 @@
           <Top>1.71104cm</Top>
           <Left>7.32251cm</Left>
           <Height>0.6cm</Height>
-          <Width>4.61667cm</Width>
+          <Width>6.07188cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
